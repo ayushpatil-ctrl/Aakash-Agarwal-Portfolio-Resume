@@ -22,26 +22,19 @@ import {
 import { ThemeMode } from './types';
 
 export default function App() {
-  const [currentTheme, setCurrentTheme] = useState<ThemeMode>(() => {
-    const saved = localStorage.getItem('portfolio_theme_v2');
-    if (saved === 'burgundy' || saved === 'emerald' || saved === 'obsidian' || saved === 'slate') {
-      return saved as ThemeMode;
-    }
-    return 'burgundy';
-  });
+  const currentTheme: ThemeMode = 'burgundy';
 
   const [isResumeOpen, setIsResumeOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
-  const handleThemeChange = (newTheme: ThemeMode) => {
-    setCurrentTheme(newTheme);
-    localStorage.setItem('portfolio_theme_v2', newTheme);
-  };
 
   const theme = themes[currentTheme];
 
   // Global keyboard shortcut for search (Ctrl+K or Cmd+K)
   useEffect(() => {
+    // Clear legacy theme overrides so the site always loads the Orbit theme
+    localStorage.setItem('portfolio_theme_v2', 'burgundy');
+    document.documentElement.classList.remove('dark');
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
@@ -51,15 +44,6 @@ export default function App() {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
-
-  // Sync theme class to html/body for dark mode compatibility
-  useEffect(() => {
-    if (currentTheme === 'obsidian') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [currentTheme]);
 
   return (
     <div
@@ -75,7 +59,6 @@ export default function App() {
       {/* Sticky Top Navigation */}
       <Navbar
         currentTheme={currentTheme}
-        onThemeChange={handleThemeChange}
         onOpenResume={() => setIsResumeOpen(true)}
       />
 

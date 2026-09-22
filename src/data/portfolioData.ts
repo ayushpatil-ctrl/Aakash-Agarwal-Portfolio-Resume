@@ -293,50 +293,5 @@ export const themes: Record<string, ThemeColors> = {
     border: 'border-[#E7E0D6]',
     badgeBg: 'bg-[#F7EFEA] border-[#EADCD4] text-[#6B1D2F]',
     badgeText: 'text-[#6B1D2F]'
-  },
-  slate: {
-    id: 'slate',
-    name: 'Oxford Slate',
-    description: 'Crisp editorial aesthetic with deep slate and refined navy accents',
-    bg: 'bg-slate-50',
-    cardBg: 'bg-white',
-    textPrimary: 'text-slate-900',
-    textSecondary: 'text-slate-600',
-    accent: 'bg-slate-900 text-white',
-    accentHover: 'hover:bg-slate-800',
-    accentLight: 'bg-slate-100 text-slate-800 border-slate-200',
-    border: 'border-slate-200',
-    badgeBg: 'bg-blue-50 border-blue-200 text-blue-800',
-    badgeText: 'text-blue-800'
-  },
-  emerald: {
-    id: 'emerald',
-    name: 'Cambridge Stone',
-    description: 'Warm academic ivory with deep forest emerald and antique bronze touches',
-    bg: 'bg-[#fbf9f5]',
-    cardBg: 'bg-white',
-    textPrimary: 'text-[#1c241e]',
-    textSecondary: 'text-[#47544b]',
-    accent: 'bg-[#1b4332] text-[#f8faf7]',
-    accentHover: 'hover:bg-[#143427]',
-    accentLight: 'bg-[#eef3ee] text-[#1b4332] border-[#cfe0d2]',
-    border: 'border-[#e4dfd5]',
-    badgeBg: 'bg-[#eaf4ed] border-[#c1e0c8] text-[#1b4332]',
-    badgeText: 'text-[#1b4332]'
-  },
-  obsidian: {
-    id: 'obsidian',
-    name: 'Midnight Obsidian',
-    description: 'Minimalist high-contrast dark palette with crisp platinum typography',
-    bg: 'bg-[#0b0f19]',
-    cardBg: 'bg-[#111827]',
-    textPrimary: 'text-[#f9fafb]',
-    textSecondary: 'text-[#9ca3af]',
-    accent: 'bg-blue-600 text-white',
-    accentHover: 'hover:bg-blue-500',
-    accentLight: 'bg-[#1f293d] text-[#93c5fd] border-[#374151]',
-    border: 'border-[#1f2937]',
-    badgeBg: 'bg-[#1e293b] border-[#334155] text-[#60a5fa]',
-    badgeText: 'text-[#60a5fa]'
   }
 };
