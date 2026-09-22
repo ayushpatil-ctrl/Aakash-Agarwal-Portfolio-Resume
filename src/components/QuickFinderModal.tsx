@@ -168,12 +168,16 @@ export default function QuickFinderModal({
             ? 'bg-[#0f172a] border-slate-700 text-slate-100'
             : currentTheme === 'emerald'
             ? 'bg-[#faf8f4] border-[#dcd4c6] text-[#1c241e]'
+            : currentTheme === 'burgundy'
+            ? 'bg-[#FAF7F2] border-[#E5DAD0] text-[#3D332A]'
             : 'bg-white border-slate-300 text-slate-900'
         }`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search Input Bar */}
-        <div className="p-4 border-b flex items-center gap-3">
+        <div className={`p-4 border-b flex items-center gap-3 ${
+          currentTheme === 'burgundy' ? 'border-[#EADCD4]' : ''
+        }`}>
           <Search className="w-5 h-5 text-slate-400 shrink-0" />
           <input
             ref={inputRef}
@@ -196,14 +200,18 @@ export default function QuickFinderModal({
           <button
             type="button"
             onClick={onClose}
-            className="hidden sm:inline-flex px-2 py-0.5 rounded border text-[11px] font-mono text-slate-400 border-slate-300 dark:border-slate-700"
+            className={`hidden sm:inline-flex px-2 py-0.5 rounded border text-[11px] font-mono text-slate-400 ${
+              currentTheme === 'burgundy' ? 'border-[#EADCD4]' : 'border-slate-300 dark:border-slate-700'
+            }`}
           >
             ESC
           </button>
         </div>
 
         {/* Filter Categories Pill Bar */}
-        <div className="px-4 py-2.5 border-b flex items-center gap-2 overflow-x-auto text-xs">
+        <div className={`px-4 py-2.5 border-b flex items-center gap-2 overflow-x-auto text-xs ${
+          currentTheme === 'burgundy' ? 'border-[#EADCD4]' : ''
+        }`}>
           {(['All', 'Skills', 'Experience', 'Model UN', 'Education'] as const).map((filter) => {
             const isActive = selectedFilter === filter;
             return (
@@ -218,7 +226,11 @@ export default function QuickFinderModal({
                       ? 'bg-blue-600 text-white'
                       : currentTheme === 'emerald'
                       ? 'bg-[#1b4332] text-white'
+                      : currentTheme === 'burgundy'
+                      ? 'bg-[#6B1D2F] text-white shadow-xs'
                       : 'bg-slate-900 text-white'
+                    : currentTheme === 'burgundy'
+                    ? 'bg-[#F2EAE4] text-[#5C524A] hover:bg-[#EAE1D9]'
                     : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
                 }`}
               >
@@ -254,6 +266,8 @@ export default function QuickFinderModal({
                       ? 'hover:bg-slate-800/80 hover:border-slate-700'
                       : currentTheme === 'emerald'
                       ? 'hover:bg-[#f3ede1] hover:border-[#dfd6c6]'
+                      : currentTheme === 'burgundy'
+                      ? 'hover:bg-[#F2EAE4] hover:border-[#E5DAD0]'
                       : 'hover:bg-slate-50 hover:border-slate-200'
                   }`}
                 >
@@ -264,6 +278,8 @@ export default function QuickFinderModal({
                           ? 'bg-slate-800 text-blue-400'
                           : currentTheme === 'emerald'
                           ? 'bg-[#e5eee7] text-[#1b4332]'
+                          : currentTheme === 'burgundy'
+                          ? 'bg-[#F7EFEA] text-[#6B1D2F]'
                           : 'bg-slate-100 text-slate-700'
                       }`}
                     >
@@ -277,11 +293,19 @@ export default function QuickFinderModal({
                         <span
                           className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${
                             item.category === 'Experience'
-                              ? 'bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300'
+                              ? currentTheme === 'burgundy'
+                                ? 'bg-[#F7EFEA] text-[#6B1D2F]'
+                                : 'bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300'
                               : item.category === 'Model UN'
-                              ? 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300'
+                              ? currentTheme === 'burgundy'
+                                ? 'bg-[#F8EFEA] text-[#8F263E]'
+                                : 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300'
                               : item.category === 'Skills'
-                              ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300'
+                              ? currentTheme === 'burgundy'
+                                ? 'bg-[#F2EAE4] text-[#4A423B]'
+                                : 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300'
+                              : currentTheme === 'burgundy'
+                              ? 'bg-[#F7EFEA] text-[#6B1D2F]'
                               : 'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300'
                           }`}
                         >

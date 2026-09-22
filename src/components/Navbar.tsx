@@ -29,6 +29,8 @@ export default function Navbar({ currentTheme, onThemeChange, onOpenResume }: Na
           ? 'bg-[#0b0f19]/90 border-slate-800 text-slate-100'
           : currentTheme === 'emerald'
           ? 'bg-[#fbf9f5]/90 border-[#e4dfd5] text-[#1c241e]'
+          : currentTheme === 'burgundy'
+          ? 'bg-[#FAF7F2]/95 border-[#E7E0D6] text-[#231E1C]'
           : 'bg-white/90 border-slate-200 text-slate-900'
       }`}
     >
@@ -46,6 +48,8 @@ export default function Navbar({ currentTheme, onThemeChange, onOpenResume }: Na
                 ? 'bg-blue-600 text-white'
                 : currentTheme === 'emerald'
                 ? 'bg-[#1b4332] text-white'
+                : currentTheme === 'burgundy'
+                ? 'bg-[#6B1D2F] text-white shadow-xs'
                 : 'bg-slate-900 text-white'
             }`}
           >
@@ -61,6 +65,8 @@ export default function Navbar({ currentTheme, onThemeChange, onOpenResume }: Na
                   ? 'text-slate-400'
                   : currentTheme === 'emerald'
                   ? 'text-[#5a6b5e]'
+                  : currentTheme === 'burgundy'
+                  ? 'text-[#6F665E]'
                   : 'text-slate-500'
               }`}
             >
@@ -81,6 +87,8 @@ export default function Navbar({ currentTheme, onThemeChange, onOpenResume }: Na
                   ? 'text-slate-300 hover:text-white'
                   : currentTheme === 'emerald'
                   ? 'text-[#38463c] hover:text-[#1b4332]'
+                  : currentTheme === 'burgundy'
+                  ? 'text-[#5C524A] hover:text-[#6B1D2F]'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -99,9 +107,25 @@ export default function Navbar({ currentTheme, onThemeChange, onOpenResume }: Na
                 ? 'bg-slate-900 border-slate-700'
                 : currentTheme === 'emerald'
                 ? 'bg-[#efebe4] border-[#d8d1c5]'
+                : currentTheme === 'burgundy'
+                ? 'bg-[#F2EAE4] border-[#E5DAD0]'
                 : 'bg-slate-100 border-slate-200'
             }`}
           >
+            <button
+              id="theme-btn-burgundy"
+              type="button"
+              onClick={() => onThemeChange('burgundy')}
+              title="Orbit Burgundy Theme"
+              className={`px-2.5 py-1.5 rounded-md font-medium transition-all flex items-center gap-1.5 ${
+                currentTheme === 'burgundy'
+                  ? 'bg-[#6B1D2F] text-white shadow-xs'
+                  : 'text-[#5C524A] hover:text-[#231E1C]'
+              }`}
+            >
+              <span className="w-2.5 h-2.5 rounded-full bg-[#E5889A] inline-block" />
+              <span>Orbit</span>
+            </button>
             <button
               id="theme-btn-slate"
               type="button"
@@ -156,6 +180,8 @@ export default function Navbar({ currentTheme, onThemeChange, onOpenResume }: Na
                 ? 'border-slate-700 bg-slate-800 text-white hover:bg-slate-700'
                 : currentTheme === 'emerald'
                 ? 'border-[#cfe0d2] bg-[#eef3ee] text-[#1b4332] hover:bg-[#e2ebe3]'
+                : currentTheme === 'burgundy'
+                ? 'border-[#E2D4C8] bg-[#F7EFEA] text-[#6B1D2F] hover:bg-[#EFE4DC]'
                 : 'border-slate-300 bg-slate-100 text-slate-800 hover:bg-slate-200'
             }`}
           >
@@ -195,6 +221,8 @@ export default function Navbar({ currentTheme, onThemeChange, onOpenResume }: Na
               ? 'bg-[#0f1422] border-slate-800'
               : currentTheme === 'emerald'
               ? 'bg-[#f5f1ea] border-[#ded8cb]'
+              : currentTheme === 'burgundy'
+              ? 'bg-[#FAF7F2] border-[#E7E0D6]'
               : 'bg-slate-50 border-slate-200'
           }`}
         >
@@ -217,6 +245,13 @@ export default function Navbar({ currentTheme, onThemeChange, onOpenResume }: Na
           <div className="pt-2 border-t flex items-center justify-between">
             <span className="text-xs font-medium text-slate-500">Theme</span>
             <div className="flex items-center gap-1 text-xs">
+              <button
+                type="button"
+                onClick={() => onThemeChange('burgundy')}
+                className={`px-2 py-1 rounded font-medium ${currentTheme === 'burgundy' ? 'bg-[#6B1D2F] text-white' : 'border border-[#E7E0D6]'}`}
+              >
+                Orbit
+              </button>
               <button
                 type="button"
                 onClick={() => onThemeChange('slate')}

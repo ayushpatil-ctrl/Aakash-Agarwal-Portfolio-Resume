@@ -59,6 +59,8 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
                 ? 'text-slate-400'
                 : currentTheme === 'emerald'
                 ? 'text-[#48574c]'
+                : currentTheme === 'burgundy'
+                ? 'text-[#5C524A]'
                 : 'text-slate-600'
             }`}
           >
@@ -85,7 +87,11 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
                     ? 'bg-blue-600 text-white'
                     : currentTheme === 'emerald'
                     ? 'bg-[#1b4332] text-white'
+                    : currentTheme === 'burgundy'
+                    ? 'bg-[#6B1D2F] text-white shadow-xs'
                     : 'bg-slate-900 text-white'
+                  : currentTheme === 'burgundy'
+                  ? 'bg-[#F2EAE4] text-[#5C524A] hover:bg-[#EAE1D9]'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
               }`}
             >
@@ -104,7 +110,11 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
                     ? 'bg-blue-600 text-white'
                     : currentTheme === 'emerald'
                     ? 'bg-[#1b4332] text-white'
+                    : currentTheme === 'burgundy'
+                    ? 'bg-[#6B1D2F] text-white shadow-xs'
                     : 'bg-slate-900 text-white'
+                  : currentTheme === 'burgundy'
+                  ? 'bg-[#F2EAE4] text-[#5C524A] hover:bg-[#EAE1D9]'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
               }`}
             >
@@ -124,7 +134,11 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
                     ? 'bg-blue-600 text-white'
                     : currentTheme === 'emerald'
                     ? 'bg-[#1b4332] text-white'
+                    : currentTheme === 'burgundy'
+                    ? 'bg-[#6B1D2F] text-white shadow-xs'
                     : 'bg-slate-900 text-white'
+                  : currentTheme === 'burgundy'
+                  ? 'bg-[#F2EAE4] text-[#5C524A] hover:bg-[#EAE1D9]'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
               }`}
             >
@@ -147,7 +161,11 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
                   onClick={() => setSelectedTag(isTagSelected ? null : tag)}
                   className={`px-2.5 py-1 rounded-md transition-all whitespace-nowrap ${
                     isTagSelected
-                      ? 'bg-blue-600 text-white dark:bg-blue-500 font-semibold'
+                      ? currentTheme === 'burgundy'
+                        ? 'bg-[#6B1D2F] text-white font-semibold shadow-xs'
+                        : 'bg-blue-600 text-white dark:bg-blue-500 font-semibold'
+                      : currentTheme === 'burgundy'
+                      ? 'bg-[#FAF7F2] border border-[#E7E0D6] text-[#5C524A] hover:bg-[#F2EAE4]'
                       : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-400'
                   }`}
                 >
@@ -173,6 +191,8 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
                     ? 'bg-slate-900/80 border-slate-800 hover:border-slate-700'
                     : currentTheme === 'emerald'
                     ? 'bg-white border-[#e6e0d5] hover:border-[#cfc6b8]'
+                    : currentTheme === 'burgundy'
+                    ? 'bg-white border-[#E7E0D6] hover:border-[#D5C9BE] shadow-2xs'
                     : 'bg-white border-slate-200 hover:border-slate-300 shadow-xs'
                 }`}
               >
@@ -180,7 +200,9 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
                   <div className="flex items-start gap-4">
                     <div
                       className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${
-                        isResearch
+                        currentTheme === 'burgundy'
+                          ? 'bg-[#6B1D2F] text-white'
+                          : isResearch
                           ? currentTheme === 'obsidian'
                             ? 'bg-blue-600 text-white'
                             : 'bg-slate-900 text-white'
@@ -197,7 +219,11 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
                     </div>
                     <div>
                       <div className="flex flex-wrap items-center gap-2 mb-1">
-                        <span className="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                        <span className={`text-xs font-bold uppercase tracking-wider ${
+                          currentTheme === 'burgundy'
+                            ? 'text-[#6B1D2F]'
+                            : 'text-blue-600 dark:text-blue-400'
+                        }`}>
                           {exp.organization}
                         </span>
                         <span className="text-slate-300 dark:text-slate-600">•</span>
@@ -229,13 +255,19 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
                           ? 'bg-slate-800/80 border-slate-700'
                           : currentTheme === 'emerald'
                           ? 'bg-[#f4f7f4] border-[#d2e2d5]'
+                          : currentTheme === 'burgundy'
+                          ? 'bg-[#F7EFEA] border-[#EADCD4]'
                           : 'bg-slate-50 border-slate-200'
                       }`}
                     >
                       <div className="text-[11px] font-medium text-slate-500">
                         Core Domain
                       </div>
-                      <div className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white mt-0.5">
+                      <div className={`text-xs sm:text-sm font-bold mt-0.5 ${
+                        currentTheme === 'burgundy'
+                          ? 'text-[#6B1D2F]'
+                          : 'text-slate-900 dark:text-white'
+                      }`}>
                         {exp.impactArea}
                       </div>
                     </div>
@@ -247,6 +279,8 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
                       className={`px-3 py-1.5 rounded-lg border text-xs font-medium transition-all flex items-center gap-1.5 ${
                         isCopied
                           ? 'bg-emerald-50 border-emerald-300 text-emerald-800'
+                          : currentTheme === 'burgundy'
+                          ? 'bg-[#FAF7F2] border-[#E7E0D6] hover:bg-[#F2EAE4] text-[#5C524A]'
                           : 'bg-slate-50 border-slate-200 hover:bg-slate-100 text-slate-700 dark:bg-slate-800 dark:border-slate-700 dark:text-slate-300'
                       }`}
                     >
@@ -274,11 +308,13 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
                     {exp.points.map((point, idx) => (
                       <div
                         key={idx}
-                        className={`p-4 rounded-xl border flex items-start gap-3 text-sm leading-relaxed transition-colors hover:border-slate-400 ${
+                        className={`p-4 rounded-xl border flex items-start gap-3 text-sm leading-relaxed transition-colors ${
                           currentTheme === 'obsidian'
                             ? 'bg-slate-850/50 border-slate-800 text-slate-300'
                             : currentTheme === 'emerald'
                             ? 'bg-[#fbf9f5] border-[#eae4d8] text-[#303e33]'
+                            : currentTheme === 'burgundy'
+                            ? 'bg-[#FAF7F2] border-[#E8E1D7] text-[#4A423B]'
                             : 'bg-slate-50/70 border-slate-100 text-slate-700'
                         }`}
                       >
@@ -303,11 +339,15 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
                         onClick={() => setSelectedTag(isTagActive ? null : tag)}
                         className={`text-xs px-2.5 py-1 rounded-md border font-medium cursor-pointer transition-all ${
                           isTagActive
-                            ? 'bg-blue-600 text-white border-blue-600 font-semibold'
+                            ? currentTheme === 'burgundy'
+                              ? 'bg-[#6B1D2F] text-white border-[#6B1D2F] font-semibold'
+                              : 'bg-blue-600 text-white border-blue-600 font-semibold'
                             : currentTheme === 'obsidian'
                             ? 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700'
                             : currentTheme === 'emerald'
                             ? 'bg-[#eef3ee] border-[#cfe0d2] text-[#1b4332] hover:bg-[#e2ebe3]'
+                            : currentTheme === 'burgundy'
+                            ? 'bg-[#FAF7F2] border-[#E7E0D6] text-[#5C524A] hover:bg-[#F2EAE4]'
                             : 'bg-slate-100 border-slate-200 text-slate-800 hover:bg-slate-200'
                         }`}
                       >

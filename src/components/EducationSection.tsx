@@ -50,6 +50,8 @@ export default function EducationSection({ education, currentTheme }: EducationS
                 ? 'text-slate-400'
                 : currentTheme === 'emerald'
                 ? 'text-[#48574c]'
+                : currentTheme === 'burgundy'
+                ? 'text-[#5C524A]'
                 : 'text-slate-600'
             }`}
           >
@@ -65,6 +67,8 @@ export default function EducationSection({ education, currentTheme }: EducationS
               ? 'bg-slate-900/90 border-blue-900/50'
               : currentTheme === 'emerald'
               ? 'bg-[#f4f7f4] border-[#cce0d0]'
+              : currentTheme === 'burgundy'
+              ? 'bg-[#F7EFEA] border-[#EADCD4]'
               : 'bg-blue-50/60 border-blue-200'
           }`}
         >
@@ -76,6 +80,8 @@ export default function EducationSection({ education, currentTheme }: EducationS
                     ? 'bg-blue-600 text-white'
                     : currentTheme === 'emerald'
                     ? 'bg-[#1b4332] text-white'
+                    : currentTheme === 'burgundy'
+                    ? 'bg-[#6B1D2F] text-white shadow-xs'
                     : 'bg-blue-600 text-white'
                 }`}
               >
@@ -83,10 +89,18 @@ export default function EducationSection({ education, currentTheme }: EducationS
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                  <span className={`text-xs font-bold uppercase tracking-wider ${
+                    currentTheme === 'burgundy'
+                      ? 'text-[#6B1D2F]'
+                      : 'text-blue-600 dark:text-blue-400'
+                  }`}>
                     Higher Education Pursuit
                   </span>
-                  <span className="text-xs px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-medium">
+                  <span className={`text-xs px-2 py-0.5 rounded font-medium ${
+                    currentTheme === 'burgundy'
+                      ? 'bg-[#FAF7F2] text-[#6B1D2F] border border-[#EADCD4]'
+                      : 'bg-emerald-100 text-emerald-800'
+                  }`}>
                     Freshman Year
                   </span>
                 </div>
@@ -119,7 +133,11 @@ export default function EducationSection({ education, currentTheme }: EducationS
                   ? 'bg-blue-600 text-white shadow-xs'
                   : currentTheme === 'emerald'
                   ? 'bg-[#1b4332] text-white shadow-xs'
+                  : currentTheme === 'burgundy'
+                  ? 'bg-[#6B1D2F] text-white shadow-xs'
                   : 'bg-slate-900 text-white shadow-xs'
+                : currentTheme === 'burgundy'
+                ? 'bg-[#F2EAE4] text-[#5C524A] hover:bg-[#EAE1D9]'
                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
             }`}
           >
@@ -136,7 +154,11 @@ export default function EducationSection({ education, currentTheme }: EducationS
                   ? 'bg-blue-600 text-white shadow-xs'
                   : currentTheme === 'emerald'
                   ? 'bg-[#1b4332] text-white shadow-xs'
+                  : currentTheme === 'burgundy'
+                  ? 'bg-[#6B1D2F] text-white shadow-xs'
                   : 'bg-slate-900 text-white shadow-xs'
+                : currentTheme === 'burgundy'
+                ? 'bg-[#F2EAE4] text-[#5C524A] hover:bg-[#EAE1D9]'
                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
             }`}
           >
@@ -153,7 +175,11 @@ export default function EducationSection({ education, currentTheme }: EducationS
                   ? 'bg-blue-600 text-white shadow-xs'
                   : currentTheme === 'emerald'
                   ? 'bg-[#1b4332] text-white shadow-xs'
+                  : currentTheme === 'burgundy'
+                  ? 'bg-[#6B1D2F] text-white shadow-xs'
                   : 'bg-slate-900 text-white shadow-xs'
+                : currentTheme === 'burgundy'
+                ? 'bg-[#F2EAE4] text-[#5C524A] hover:bg-[#EAE1D9]'
                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
             }`}
           >
@@ -174,6 +200,8 @@ export default function EducationSection({ education, currentTheme }: EducationS
                     ? 'bg-slate-900/80 border-slate-800 hover:border-slate-700'
                     : currentTheme === 'emerald'
                     ? 'bg-white border-[#e6e0d5] hover:border-[#cfc6b8]'
+                    : currentTheme === 'burgundy'
+                    ? 'bg-white border-[#E7E0D6] hover:border-[#D5C9BE] shadow-2xs'
                     : 'bg-white border-slate-200 hover:border-slate-300 shadow-xs'
                 }`}
               >
@@ -195,6 +223,8 @@ export default function EducationSection({ education, currentTheme }: EducationS
                           ? 'bg-slate-800 border-slate-700 text-blue-400'
                           : currentTheme === 'emerald'
                           ? 'bg-[#eef5ef] border-[#c8e2cc] text-[#1b4332]'
+                          : currentTheme === 'burgundy'
+                          ? 'bg-[#F7EFEA] border-[#EADCD4] text-[#6B1D2F]'
                           : 'bg-slate-50 border-slate-200 text-slate-900'
                       }`}
                     >
@@ -226,11 +256,17 @@ export default function EducationSection({ education, currentTheme }: EducationS
                           onClick={() => setSelectedSubject(selectedSubject === subject ? null : subject)}
                           className={`text-xs px-2.5 py-1 rounded-md border font-medium cursor-pointer transition-all ${
                             selectedSubject === subject
-                              ? 'ring-2 ring-blue-500 bg-blue-100 text-blue-900 dark:bg-blue-950 dark:text-blue-200'
+                              ? currentTheme === 'burgundy'
+                                ? 'ring-2 ring-[#6B1D2F] bg-[#F7EFEA] text-[#6B1D2F]'
+                                : 'ring-2 ring-blue-500 bg-blue-100 text-blue-900 dark:bg-blue-950 dark:text-blue-200'
                               : subject.includes('99/100') || subject.includes('96/100')
-                              ? 'bg-amber-50 border-amber-200 text-amber-900 font-semibold hover:bg-amber-100'
+                              ? currentTheme === 'burgundy'
+                                ? 'bg-[#F8EFEA] border-[#EADCD4] text-[#6B1D2F] font-semibold hover:bg-[#F2E7E0]'
+                                : 'bg-amber-50 border-amber-200 text-amber-900 font-semibold hover:bg-amber-100'
                               : currentTheme === 'obsidian'
                               ? 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700'
+                              : currentTheme === 'burgundy'
+                              ? 'bg-[#FAF7F2] border-[#E7E0D6] text-[#5C524A] hover:bg-[#F2EAE4]'
                               : 'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200'
                           }`}
                         >
@@ -242,8 +278,14 @@ export default function EducationSection({ education, currentTheme }: EducationS
 
                   {/* Selected Subject Context Tip */}
                   {selectedSubject && item.keySubjects.includes(selectedSubject) && (
-                    <div className="p-3 rounded-lg border text-xs mb-5 bg-blue-50/70 border-blue-200 text-blue-900 dark:bg-slate-800 dark:border-blue-800 dark:text-blue-300 flex items-start gap-2">
-                      <Sparkles className="w-4 h-4 shrink-0 text-blue-600 mt-0.5" />
+                    <div className={`p-3 rounded-lg border text-xs mb-5 flex items-start gap-2 ${
+                      currentTheme === 'burgundy'
+                        ? 'bg-[#F7EFEA] border-[#EADCD4] text-[#4A423B]'
+                        : 'bg-blue-50/70 border-blue-200 text-blue-900 dark:bg-slate-800 dark:border-blue-800 dark:text-blue-300'
+                    }`}>
+                      <Sparkles className={`w-4 h-4 shrink-0 mt-0.5 ${
+                        currentTheme === 'burgundy' ? 'text-[#6B1D2F]' : 'text-blue-600'
+                      }`} />
                       <div>
                         <span className="font-semibold">{selectedSubject}: </span>
                         {selectedSubject.includes('Chemistry')
@@ -290,6 +332,8 @@ export default function EducationSection({ education, currentTheme }: EducationS
                 ? 'bg-slate-900/80 border-slate-800'
                 : currentTheme === 'emerald'
                 ? 'bg-white border-[#e6e0d5]'
+                : currentTheme === 'burgundy'
+                ? 'bg-white border-[#E7E0D6] shadow-2xs'
                 : 'bg-white border-slate-200 shadow-xs'
             }`}
           >
@@ -307,7 +351,11 @@ export default function EducationSection({ education, currentTheme }: EducationS
                 <div key={item.name} className="space-y-1.5">
                   <div className="flex items-center justify-between text-xs sm:text-sm">
                     <span className="font-semibold">{item.name}</span>
-                    <span className="font-mono font-bold text-blue-600 dark:text-blue-400">
+                    <span className={`font-mono font-bold ${
+                      currentTheme === 'burgundy'
+                        ? 'text-[#6B1D2F]'
+                        : 'text-blue-600 dark:text-blue-400'
+                    }`}>
                       {item.label}
                     </span>
                   </div>
@@ -315,7 +363,13 @@ export default function EducationSection({ education, currentTheme }: EducationS
                   <div className="h-3 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden border dark:border-slate-700">
                     <div
                       className={`h-full rounded-full transition-all duration-700 ${
-                        item.score >= 95
+                        currentTheme === 'burgundy'
+                          ? item.score >= 95
+                            ? 'bg-[#6B1D2F]'
+                            : item.score >= 90
+                            ? 'bg-[#8F263E]'
+                            : 'bg-[#B24D65]'
+                          : item.score >= 95
                           ? 'bg-emerald-600'
                           : item.score >= 90
                           ? 'bg-blue-600'
@@ -333,7 +387,11 @@ export default function EducationSection({ education, currentTheme }: EducationS
 
             <div className="mt-8 pt-4 border-t flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500">
               <span>Standard CBSE 100-Point Grading Scale</span>
-              <span className="font-semibold text-emerald-600 dark:text-emerald-400">
+              <span className={`font-semibold ${
+                currentTheme === 'burgundy'
+                  ? 'text-[#6B1D2F]'
+                  : 'text-emerald-600 dark:text-emerald-400'
+              }`}>
                 Consistent 93%+ Aggregate Across Both Board Milestones
               </span>
             </div>
@@ -349,6 +407,8 @@ export default function EducationSection({ education, currentTheme }: EducationS
                 ? 'bg-slate-900/80 border-slate-800'
                 : currentTheme === 'emerald'
                 ? 'bg-white border-[#e6e0d5]'
+                : currentTheme === 'burgundy'
+                ? 'bg-white border-[#E7E0D6] shadow-2xs'
                 : 'bg-white border-slate-200 shadow-xs'
             }`}
           >
@@ -362,11 +422,19 @@ export default function EducationSection({ education, currentTheme }: EducationS
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-              <div className="p-4 rounded-xl border bg-slate-50 dark:bg-slate-800/60 dark:border-slate-700">
+              <div className={`p-4 rounded-xl border ${
+                currentTheme === 'burgundy'
+                  ? 'bg-[#FAF7F2] border-[#E7E0D6]'
+                  : 'bg-slate-50 dark:bg-slate-800/60 dark:border-slate-700'
+              }`}>
                 <div className="text-xs uppercase font-bold text-slate-500 mb-1">
                   US Scale Equivalent
                 </div>
-                <div className="text-2xl font-bold font-serif-display text-blue-600 dark:text-blue-400">
+                <div className={`text-2xl font-bold font-serif-display ${
+                  currentTheme === 'burgundy'
+                    ? 'text-[#6B1D2F]'
+                    : 'text-blue-600 dark:text-blue-400'
+                }`}>
                   3.9 – 4.0 GPA
                 </div>
                 <div className="text-xs text-slate-500 mt-1">
@@ -374,11 +442,19 @@ export default function EducationSection({ education, currentTheme }: EducationS
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl border bg-slate-50 dark:bg-slate-800/60 dark:border-slate-700">
+              <div className={`p-4 rounded-xl border ${
+                currentTheme === 'burgundy'
+                  ? 'bg-[#FAF7F2] border-[#E7E0D6]'
+                  : 'bg-slate-50 dark:bg-slate-800/60 dark:border-slate-700'
+              }`}>
                 <div className="text-xs uppercase font-bold text-slate-500 mb-1">
                   UK Honours Classification
                 </div>
-                <div className="text-2xl font-bold font-serif-display text-emerald-600 dark:text-emerald-400">
+                <div className={`text-2xl font-bold font-serif-display ${
+                  currentTheme === 'burgundy'
+                    ? 'text-[#8F263E]'
+                    : 'text-emerald-600 dark:text-emerald-400'
+                }`}>
                   First Class
                 </div>
                 <div className="text-xs text-slate-500 mt-1">
@@ -386,11 +462,19 @@ export default function EducationSection({ education, currentTheme }: EducationS
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl border bg-slate-50 dark:bg-slate-800/60 dark:border-slate-700">
+              <div className={`p-4 rounded-xl border ${
+                currentTheme === 'burgundy'
+                  ? 'bg-[#FAF7F2] border-[#E7E0D6]'
+                  : 'bg-slate-50 dark:bg-slate-800/60 dark:border-slate-700'
+              }`}>
                 <div className="text-xs uppercase font-bold text-slate-500 mb-1">
                   National Standing
                 </div>
-                <div className="text-2xl font-bold font-serif-display text-amber-600 dark:text-amber-400">
+                <div className={`text-2xl font-bold font-serif-display ${
+                  currentTheme === 'burgundy'
+                    ? 'text-[#9A3412]'
+                    : 'text-amber-600 dark:text-amber-400'
+                }`}>
                   Top 2%
                 </div>
                 <div className="text-xs text-slate-500 mt-1">
@@ -399,8 +483,14 @@ export default function EducationSection({ education, currentTheme }: EducationS
               </div>
             </div>
 
-            <div className="p-4 rounded-xl border border-blue-200 bg-blue-50/60 dark:bg-blue-950/40 dark:border-blue-900 text-xs sm:text-sm text-slate-700 dark:text-slate-300 flex items-start gap-3">
-              <Info className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+            <div className={`p-4 rounded-xl border text-xs sm:text-sm flex items-start gap-3 ${
+              currentTheme === 'burgundy'
+                ? 'border-[#EADCD4] bg-[#F7EFEA] text-[#4A423B]'
+                : 'border-blue-200 bg-blue-50/60 dark:bg-blue-950/40 dark:border-blue-900 text-slate-700 dark:text-slate-300'
+            }`}>
+              <Info className={`w-5 h-5 shrink-0 mt-0.5 ${
+                currentTheme === 'burgundy' ? 'text-[#6B1D2F]' : 'text-blue-600'
+              }`} />
               <div>
                 <span className="font-semibold">CBSE Rigor Note: </span>
                 The Central Board of Secondary Education (CBSE) is India's premier national board curriculum. Scoring above 90% is traditionally recognized as the distinction benchmark required for elite engineering and research institution placement.

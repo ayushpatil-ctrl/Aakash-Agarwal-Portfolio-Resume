@@ -61,7 +61,7 @@ export interface SkillGroup {
   }[];
 }
 
-export type ThemeMode = 'slate' | 'emerald' | 'obsidian';
+export type ThemeMode = 'burgundy' | 'slate' | 'emerald' | 'obsidian';
 
 export interface ThemeColors {
   id: ThemeMode;

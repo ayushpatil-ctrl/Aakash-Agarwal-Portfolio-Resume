@@ -279,6 +279,21 @@ export const skillsData: SkillGroup[] = [
 ];
 
 export const themes: Record<string, ThemeColors> = {
+  burgundy: {
+    id: 'burgundy',
+    name: 'Orbit Burgundy',
+    description: 'Warm cream paper canvas with deep wine burgundy accents and soft ivory borders',
+    bg: 'bg-[#FAF7F2]',
+    cardBg: 'bg-white',
+    textPrimary: 'text-[#231E1C]',
+    textSecondary: 'text-[#6F665E]',
+    accent: 'bg-[#6B1D2F] text-white',
+    accentHover: 'hover:bg-[#561423]',
+    accentLight: 'bg-[#F7EFEA] text-[#6B1D2F] border-[#EADCD4]',
+    border: 'border-[#E7E0D6]',
+    badgeBg: 'bg-[#F7EFEA] border-[#EADCD4] text-[#6B1D2F]',
+    badgeText: 'text-[#6B1D2F]'
+  },
   slate: {
     id: 'slate',
     name: 'Oxford Slate',

@@ -23,11 +23,11 @@ import { ThemeMode } from './types';
 
 export default function App() {
   const [currentTheme, setCurrentTheme] = useState<ThemeMode>(() => {
-    const saved = localStorage.getItem('portfolio_theme');
-    if (saved === 'emerald' || saved === 'obsidian' || saved === 'slate') {
+    const saved = localStorage.getItem('portfolio_theme_v2');
+    if (saved === 'burgundy' || saved === 'emerald' || saved === 'obsidian' || saved === 'slate') {
       return saved as ThemeMode;
     }
-    return 'slate';
+    return 'burgundy';
   });
 
   const [isResumeOpen, setIsResumeOpen] = useState(false);
@@ -35,7 +35,7 @@ export default function App() {
 
   const handleThemeChange = (newTheme: ThemeMode) => {
     setCurrentTheme(newTheme);
-    localStorage.setItem('portfolio_theme', newTheme);
+    localStorage.setItem('portfolio_theme_v2', newTheme);
   };
 
   const theme = themes[currentTheme];
@@ -143,6 +143,7 @@ export default function App() {
       <ResumeModal
         isOpen={isResumeOpen}
         onClose={() => setIsResumeOpen(false)}
+        currentTheme={currentTheme}
         profile={profileData}
         education={educationData}
         experiences={experienceData}

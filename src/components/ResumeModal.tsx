@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { X, Printer, Copy, Check, Download, ExternalLink, GraduationCap, Briefcase, Award } from 'lucide-react';
-import { ProfileData, EducationItem, ExperienceItem, MUNItem } from '../types';
+import { ProfileData, EducationItem, ExperienceItem, MUNItem, ThemeMode } from '../types';
 
 interface ResumeModalProps {
   isOpen: boolean;
   onClose: () => void;
+  currentTheme?: ThemeMode;
   profile: ProfileData;
   education: EducationItem[];
   experiences: ExperienceItem[];
@@ -14,6 +15,7 @@ interface ResumeModalProps {
 export default function ResumeModal({
   isOpen,
   onClose,
+  currentTheme,
   profile,
   education,
   experiences,
@@ -99,15 +101,23 @@ KEY SKILLS
     >
       <div
         id="resume-modal-container"
-        className="relative w-full max-w-4xl bg-white text-slate-900 rounded-2xl shadow-2xl border border-slate-300 overflow-hidden my-8 print:my-0 print:border-none print:shadow-none"
+        className={`relative w-full max-w-4xl bg-white text-slate-900 rounded-2xl shadow-2xl overflow-hidden my-8 print:my-0 print:border-none print:shadow-none border ${
+          currentTheme === 'burgundy' ? 'border-[#EADCD4]' : 'border-slate-300'
+        }`}
       >
         {/* Modal Toolbar (hidden in print) */}
-        <div className="sticky top-0 z-10 px-6 py-4 bg-slate-900 text-white flex items-center justify-between print:hidden">
+        <div className={`sticky top-0 z-10 px-6 py-4 text-white flex items-center justify-between print:hidden ${
+          currentTheme === 'burgundy' ? 'bg-[#3D101A]' : 'bg-slate-900'
+        }`}>
           <div className="flex items-center gap-2">
             <span className="font-serif-display font-bold text-base">
               Aakash Agarwal · Official Curriculum Vitae
             </span>
-            <span className="text-xs px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-400/30">
+            <span className={`text-xs px-2 py-0.5 rounded border ${
+              currentTheme === 'burgundy'
+                ? 'bg-white/15 text-[#F7EFEA] border-white/20'
+                : 'bg-blue-500/20 text-blue-300 border-blue-400/30'
+            }`}>
               Verified PDF Transcript
             </span>
           </div>
@@ -117,7 +127,11 @@ KEY SKILLS
               id="print-resume-btn"
               type="button"
               onClick={handlePrint}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold transition-colors"
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-white text-xs font-semibold transition-colors ${
+                currentTheme === 'burgundy'
+                  ? 'bg-[#6B1D2F] hover:bg-[#8F263E]'
+                  : 'bg-blue-600 hover:bg-blue-500'
+              }`}
             >
               <Printer className="w-3.5 h-3.5" />
               <span>Print / Save PDF</span>
@@ -127,7 +141,11 @@ KEY SKILLS
               id="copy-all-resume-btn"
               type="button"
               onClick={handleCopyText}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold border border-slate-700 transition-colors"
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-white text-xs font-semibold border transition-colors ${
+                currentTheme === 'burgundy'
+                  ? 'bg-[#4A1521] hover:bg-[#5C1B2A] border-[#6B1D2F]'
+                  : 'bg-slate-800 hover:bg-slate-700 border-slate-700'
+              }`}
             >
               {copied ? (
                 <>
@@ -144,7 +162,11 @@ KEY SKILLS
               id="close-resume-modal-btn"
               type="button"
               onClick={onClose}
-              className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors ml-2"
+              className={`p-1.5 rounded-lg transition-colors ml-2 ${
+                currentTheme === 'burgundy'
+                  ? 'bg-[#4A1521] hover:bg-[#5C1B2A] text-slate-200 hover:text-white'
+                  : 'bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white'
+              }`}
               aria-label="Close modal"
             >
               <X className="w-5 h-5" />

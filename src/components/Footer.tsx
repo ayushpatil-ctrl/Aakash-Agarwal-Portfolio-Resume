@@ -23,11 +23,15 @@ export default function Footer({ profile, currentTheme, onOpenResume }: FooterPr
           ? 'bg-[#080b12] border-slate-800 text-slate-400'
           : currentTheme === 'emerald'
           ? 'bg-[#f7f4ed] border-[#ded7ca] text-[#425046]'
+          : currentTheme === 'burgundy'
+          ? 'bg-[#F2EAE4] border-[#E5DAD0] text-[#5C524A]'
           : 'bg-slate-50 border-slate-200 text-slate-600'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-200/60 dark:border-slate-800">
+        <div className={`flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b ${
+          currentTheme === 'burgundy' ? 'border-[#EADCD4]' : 'border-slate-200/60 dark:border-slate-800'
+        }`}>
           <div className="flex items-center gap-3">
             <div
               className={`w-9 h-9 rounded-lg flex items-center justify-center font-bold text-xs tracking-wider ${
@@ -35,6 +39,8 @@ export default function Footer({ profile, currentTheme, onOpenResume }: FooterPr
                   ? 'bg-blue-600 text-white'
                   : currentTheme === 'emerald'
                   ? 'bg-[#1b4332] text-white'
+                  : currentTheme === 'burgundy'
+                  ? 'bg-[#6B1D2F] text-white'
                   : 'bg-slate-900 text-white'
               }`}
             >
@@ -59,7 +65,11 @@ export default function Footer({ profile, currentTheme, onOpenResume }: FooterPr
             <button
               type="button"
               onClick={onOpenResume}
-              className="text-blue-600 dark:text-blue-400 font-semibold hover:underline"
+              className={`font-semibold hover:underline ${
+                currentTheme === 'burgundy'
+                  ? 'text-[#6B1D2F]'
+                  : 'text-blue-600 dark:text-blue-400'
+              }`}
             >
               View Full Resume
             </button>
@@ -69,7 +79,11 @@ export default function Footer({ profile, currentTheme, onOpenResume }: FooterPr
             id="footer-back-to-top-btn"
             type="button"
             onClick={scrollToTop}
-            className="p-2.5 rounded-lg border bg-white dark:bg-slate-800 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+            className={`p-2.5 rounded-lg border transition-colors ${
+              currentTheme === 'burgundy'
+                ? 'bg-white border-[#EADCD4] text-[#6B1D2F] hover:bg-[#FAF7F2]'
+                : 'bg-white dark:bg-slate-800 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700'
+            }`}
             aria-label="Scroll back to top"
           >
             <ArrowUp className="w-4 h-4" />

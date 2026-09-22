@@ -62,25 +62,41 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
       case 'secretariat':
         return {
           label: 'Secretariat Executive',
-          bg: currentTheme === 'obsidian' ? 'bg-amber-950/60 border-amber-800 text-amber-300' : 'bg-amber-50 border-amber-200 text-amber-900',
+          bg: currentTheme === 'obsidian'
+            ? 'bg-amber-950/60 border-amber-800 text-amber-300'
+            : currentTheme === 'burgundy'
+            ? 'bg-[#F7EFEA] border-[#EADCD4] text-[#6B1D2F]'
+            : 'bg-amber-50 border-amber-200 text-amber-900',
           icon: Shield,
         };
       case 'executive-board':
         return {
           label: 'Executive Board (UNHRC)',
-          bg: currentTheme === 'obsidian' ? 'bg-purple-950/60 border-purple-800 text-purple-300' : 'bg-purple-50 border-purple-200 text-purple-900',
+          bg: currentTheme === 'obsidian'
+            ? 'bg-purple-950/60 border-purple-800 text-purple-300'
+            : currentTheme === 'burgundy'
+            ? 'bg-[#F8EFEA] border-[#EADCD4] text-[#8F263E]'
+            : 'bg-purple-50 border-purple-200 text-purple-900',
           icon: Landmark,
         };
       case 'teamwork':
         return {
           label: 'Operations & Finance',
-          bg: currentTheme === 'obsidian' ? 'bg-blue-950/60 border-blue-800 text-blue-300' : 'bg-blue-50 border-blue-200 text-blue-900',
+          bg: currentTheme === 'obsidian'
+            ? 'bg-blue-950/60 border-blue-800 text-blue-300'
+            : currentTheme === 'burgundy'
+            ? 'bg-[#FAF7F2] border-[#E7E0D6] text-[#5C524A]'
+            : 'bg-blue-50 border-blue-200 text-blue-900',
           icon: Users,
         };
       default:
         return {
           label: 'Parliamentary Delegate',
-          bg: currentTheme === 'obsidian' ? 'bg-slate-800 border-slate-700 text-slate-300' : 'bg-slate-100 border-slate-200 text-slate-700',
+          bg: currentTheme === 'obsidian'
+            ? 'bg-slate-800 border-slate-700 text-slate-300'
+            : currentTheme === 'burgundy'
+            ? 'bg-[#FAF7F2] border-[#E7E0D6] text-[#5C524A]'
+            : 'bg-slate-100 border-slate-200 text-slate-700',
           icon: Globe2,
         };
     }
@@ -114,6 +130,8 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                 ? 'text-slate-400'
                 : currentTheme === 'emerald'
                 ? 'text-[#48574c]'
+                : currentTheme === 'burgundy'
+                ? 'text-[#5C524A]'
                 : 'text-slate-600'
             }`}
           >
@@ -129,10 +147,12 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                 ? 'bg-slate-900/60 border-slate-800'
                 : currentTheme === 'emerald'
                 ? 'bg-white border-[#e5dfd4]'
+                : currentTheme === 'burgundy'
+                ? 'bg-white border-[#E7E0D6] shadow-2xs'
                 : 'bg-white border-slate-200 shadow-2xs'
             }`}
           >
-            <div className="text-xl font-bold font-serif-display">13</div>
+            <div className={`text-xl font-bold font-serif-display ${currentTheme === 'burgundy' ? 'text-[#6B1D2F]' : ''}`}>13</div>
             <div className="text-xs text-slate-500 font-medium">Total Summits & MUNs</div>
           </div>
           <div
@@ -141,10 +161,12 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                 ? 'bg-slate-900/60 border-slate-800'
                 : currentTheme === 'emerald'
                 ? 'bg-white border-[#e5dfd4]'
+                : currentTheme === 'burgundy'
+                ? 'bg-white border-[#E7E0D6] shadow-2xs'
                 : 'bg-white border-slate-200 shadow-2xs'
             }`}
           >
-            <div className="text-xl font-bold font-serif-display">3</div>
+            <div className={`text-xl font-bold font-serif-display ${currentTheme === 'burgundy' ? 'text-[#6B1D2F]' : ''}`}>3</div>
             <div className="text-xs text-slate-500 font-medium">Secretariat Executive Posts</div>
           </div>
           <div
@@ -153,10 +175,12 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                 ? 'bg-slate-900/60 border-slate-800'
                 : currentTheme === 'emerald'
                 ? 'bg-white border-[#e5dfd4]'
+                : currentTheme === 'burgundy'
+                ? 'bg-white border-[#E7E0D6] shadow-2xs'
                 : 'bg-white border-slate-200 shadow-2xs'
             }`}
           >
-            <div className="text-xl font-bold font-serif-display">6 Years</div>
+            <div className={`text-xl font-bold font-serif-display ${currentTheme === 'burgundy' ? 'text-[#6B1D2F]' : ''}`}>6 Years</div>
             <div className="text-xs text-slate-500 font-medium">Diplomatic Trajectory</div>
           </div>
           <div
@@ -165,10 +189,12 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                 ? 'bg-slate-900/60 border-slate-800'
                 : currentTheme === 'emerald'
                 ? 'bg-white border-[#e5dfd4]'
+                : currentTheme === 'burgundy'
+                ? 'bg-white border-[#E7E0D6] shadow-2xs'
                 : 'bg-white border-slate-200 shadow-2xs'
             }`}
           >
-            <div className="text-xl font-bold font-serif-display">UNHRC</div>
+            <div className={`text-xl font-bold font-serif-display ${currentTheme === 'burgundy' ? 'text-[#6B1D2F]' : ''}`}>UNHRC</div>
             <div className="text-xs text-slate-500 font-medium">Executive Board Adjudication</div>
           </div>
         </div>
@@ -181,6 +207,8 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
               ? 'bg-slate-900/90 border-slate-800'
               : currentTheme === 'emerald'
               ? 'bg-[#faf7f2] border-[#e4ddd0]'
+              : currentTheme === 'burgundy'
+              ? 'bg-white border-[#E7E0D6] shadow-2xs'
               : 'bg-white border-slate-200 shadow-2xs'
           }`}
         >
@@ -195,7 +223,11 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search summits (e.g., JMUNC, UNHRC, TEDx, Rapporteur, Finance)..."
-                className="w-full pl-10 pr-9 py-2 rounded-xl text-sm border bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-slate-400 border-slate-200 dark:border-slate-700"
+                className={`w-full pl-10 pr-9 py-2 rounded-xl text-sm border bg-transparent focus:outline-none placeholder:text-slate-400 ${
+                  currentTheme === 'burgundy'
+                    ? 'border-[#E7E0D6] focus:ring-2 focus:ring-[#6B1D2F]'
+                    : 'border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-blue-500'
+                }`}
               />
               {searchQuery && (
                 <button
@@ -211,7 +243,11 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
             {/* View Mode Toggle: Grid vs Timeline */}
             <div
               id="mun-view-mode-toggle"
-              className="flex items-center p-1 rounded-xl border text-xs self-start sm:self-auto bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700"
+              className={`flex items-center p-1 rounded-xl border text-xs self-start sm:self-auto ${
+                currentTheme === 'burgundy'
+                  ? 'bg-[#FAF7F2] border-[#E7E0D6]'
+                  : 'bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700'
+              }`}
             >
               <button
                 type="button"
@@ -222,6 +258,8 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                       ? 'bg-blue-600 text-white shadow-xs'
                       : currentTheme === 'emerald'
                       ? 'bg-[#1b4332] text-white shadow-xs'
+                      : currentTheme === 'burgundy'
+                      ? 'bg-[#6B1D2F] text-white shadow-xs'
                       : 'bg-white text-slate-900 shadow-xs'
                     : 'text-slate-600 dark:text-slate-300'
                 }`}
@@ -238,6 +276,8 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                       ? 'bg-blue-600 text-white shadow-xs'
                       : currentTheme === 'emerald'
                       ? 'bg-[#1b4332] text-white shadow-xs'
+                      : currentTheme === 'burgundy'
+                      ? 'bg-[#6B1D2F] text-white shadow-xs'
                       : 'bg-white text-slate-900 shadow-xs'
                     : 'text-slate-600 dark:text-slate-300'
                 }`}
@@ -266,7 +306,11 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                           ? 'bg-blue-600 text-white'
                           : currentTheme === 'emerald'
                           ? 'bg-[#1b4332] text-white'
+                          : currentTheme === 'burgundy'
+                          ? 'bg-[#6B1D2F] text-white shadow-xs'
                           : 'bg-slate-900 text-white'
+                        : currentTheme === 'burgundy'
+                        ? 'bg-[#F2EAE4] text-[#5C524A] hover:bg-[#EAE1D9]'
                         : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
                     }`}
                   >
@@ -287,7 +331,9 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                 onClick={() => setSelectedYear('all')}
                 className={`px-2 py-1 rounded-md text-xs font-medium transition-all ${
                   selectedYear === 'all'
-                    ? 'bg-slate-800 text-white dark:bg-slate-200 dark:text-slate-900'
+                    ? currentTheme === 'burgundy'
+                      ? 'bg-[#6B1D2F] text-white font-semibold'
+                      : 'bg-slate-800 text-white dark:bg-slate-200 dark:text-slate-900'
                     : 'text-slate-500 hover:text-slate-900 dark:hover:text-slate-200'
                 }`}
               >
@@ -300,7 +346,9 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                   onClick={() => setSelectedYear(yr)}
                   className={`px-2 py-1 rounded-md text-xs font-mono font-medium transition-all ${
                     selectedYear === yr
-                      ? 'bg-slate-800 text-white dark:bg-slate-200 dark:text-slate-900'
+                      ? currentTheme === 'burgundy'
+                        ? 'bg-[#6B1D2F] text-white font-semibold'
+                        : 'bg-slate-800 text-white dark:bg-slate-200 dark:text-slate-900'
                       : 'text-slate-500 hover:text-slate-900 dark:hover:text-slate-200'
                   }`}
                 >
@@ -348,6 +396,8 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                       ? 'bg-slate-900/80 border-slate-800 hover:border-slate-700'
                       : currentTheme === 'emerald'
                       ? 'bg-white border-[#e6e0d5] hover:border-[#cfc6b8]'
+                      : currentTheme === 'burgundy'
+                      ? 'bg-white border-[#E7E0D6] hover:border-[#D5C9BE] shadow-2xs'
                       : 'bg-white border-slate-200 hover:border-slate-300 shadow-2xs'
                   }`}
                 >
@@ -371,13 +421,21 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                     </h3>
 
                     {/* Conference / Event Name */}
-                    <div className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">
+                    <div className={`text-sm font-semibold mb-2 ${
+                      currentTheme === 'burgundy'
+                        ? 'text-[#6B1D2F]'
+                        : 'text-blue-600 dark:text-blue-400'
+                    }`}>
                       {item.conference}
                     </div>
 
                     {/* Committee if present */}
                     {item.committee && (
-                      <div className="text-xs font-medium text-slate-700 dark:text-slate-300 mb-2 p-2 rounded bg-slate-50 dark:bg-slate-800/60 border dark:border-slate-700">
+                      <div className={`text-xs font-medium mb-2 p-2 rounded border ${
+                        currentTheme === 'burgundy'
+                          ? 'bg-[#FAF7F2] border-[#E7E0D6] text-[#4A423B]'
+                          : 'bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300'
+                      }`}>
                         Committee: <span className="font-semibold">{item.committee}</span>
                       </div>
                     )}
@@ -396,7 +454,11 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                           <button
                             type="button"
                             onClick={() => toggleExpand(item.id)}
-                            className="mt-1 text-[11px] font-semibold text-blue-600 dark:text-blue-400 flex items-center gap-1 hover:underline"
+                            className={`mt-1 text-[11px] font-semibold flex items-center gap-1 hover:underline ${
+                              currentTheme === 'burgundy'
+                                ? 'text-[#6B1D2F]'
+                                : 'text-blue-600 dark:text-blue-400'
+                            }`}
                           >
                             {isExpanded ? (
                               <>
@@ -430,14 +492,15 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
             {filteredItems.map((item) => {
               const badge = getCategoryBadge(item.category);
               const BadgeIcon = badge.icon;
-              const isExpanded = expandedCards[item.id];
 
               return (
                 <div key={item.id} className="relative group">
                   {/* Timeline Indicator Dot */}
                   <div
                     className={`absolute -left-6 sm:-left-10 top-2 w-6 h-6 rounded-full border-2 flex items-center justify-center transition-transform group-hover:scale-110 ${
-                      item.category === 'secretariat'
+                      currentTheme === 'burgundy'
+                        ? 'bg-[#6B1D2F] border-white text-white'
+                        : item.category === 'secretariat'
                         ? 'bg-amber-500 border-white text-white'
                         : item.category === 'executive-board'
                         ? 'bg-purple-600 border-white text-white'
@@ -457,6 +520,8 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                         ? 'bg-slate-900/80 border-slate-800'
                         : currentTheme === 'emerald'
                         ? 'bg-white border-[#e6e0d5]'
+                        : currentTheme === 'burgundy'
+                        ? 'bg-white border-[#E7E0D6] shadow-2xs'
                         : 'bg-white border-slate-200 shadow-2xs'
                     }`}
                   >
@@ -468,7 +533,11 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                           <BadgeIcon className="w-3 h-3" />
                           {badge.label}
                         </span>
-                        <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+                        <span className={`text-sm font-semibold ${
+                          currentTheme === 'burgundy'
+                            ? 'text-[#6B1D2F]'
+                            : 'text-blue-600 dark:text-blue-400'
+                        }`}>
                           {item.conference}
                         </span>
                       </div>
@@ -517,6 +586,8 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
               ? 'bg-slate-900/60 border-slate-800'
               : currentTheme === 'emerald'
               ? 'bg-[#faf8f4] border-[#e2ddd3]'
+              : currentTheme === 'burgundy'
+              ? 'bg-[#F7EFEA] border-[#EADCD4]'
               : 'bg-slate-50 border-slate-200'
           }`}
         >
@@ -534,7 +605,11 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                 setSelectedYear('2019');
                 setViewMode('timeline');
               }}
-              className="p-3 rounded-lg border bg-white dark:bg-slate-800 dark:border-slate-700 hover:border-blue-500 transition-colors cursor-pointer text-left sm:text-center"
+              className={`p-3 rounded-lg border transition-colors cursor-pointer text-left sm:text-center ${
+                currentTheme === 'burgundy'
+                  ? 'bg-white border-[#EADCD4] hover:border-[#6B1D2F]'
+                  : 'bg-white dark:bg-slate-800 dark:border-slate-700 hover:border-blue-500'
+              }`}
             >
               <div className="font-serif-display font-bold text-lg text-slate-900 dark:text-white">2019-2022</div>
               <div className="text-[11px] text-slate-500">Delegate Foundation</div>
@@ -545,7 +620,11 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                 setSelectedYear('2023');
                 setViewMode('timeline');
               }}
-              className="p-3 rounded-lg border bg-white dark:bg-slate-800 dark:border-slate-700 hover:border-blue-500 transition-colors cursor-pointer text-left sm:text-center"
+              className={`p-3 rounded-lg border transition-colors cursor-pointer text-left sm:text-center ${
+                currentTheme === 'burgundy'
+                  ? 'bg-white border-[#EADCD4] hover:border-[#6B1D2F]'
+                  : 'bg-white dark:bg-slate-800 dark:border-slate-700 hover:border-blue-500'
+              }`}
             >
               <div className="font-serif-display font-bold text-lg text-slate-900 dark:text-white">2022-2023</div>
               <div className="text-[11px] text-slate-500">Finance & Marketing Ops</div>
@@ -556,7 +635,11 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                 setSelectedYear('2024');
                 setViewMode('timeline');
               }}
-              className="p-3 rounded-lg border bg-white dark:bg-slate-800 dark:border-slate-700 hover:border-blue-500 transition-colors cursor-pointer text-left sm:text-center"
+              className={`p-3 rounded-lg border transition-colors cursor-pointer text-left sm:text-center ${
+                currentTheme === 'burgundy'
+                  ? 'bg-white border-[#EADCD4] hover:border-[#6B1D2F]'
+                  : 'bg-white dark:bg-slate-800 dark:border-slate-700 hover:border-blue-500'
+              }`}
             >
               <div className="font-serif-display font-bold text-lg text-slate-900 dark:text-white">2024</div>
               <div className="text-[11px] text-slate-500">Head of Affairs & UNHRC EB</div>
@@ -567,7 +650,11 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                 setSelectedYear('2025');
                 setViewMode('timeline');
               }}
-              className="p-3 rounded-lg border bg-white dark:bg-slate-800 dark:border-slate-700 hover:border-blue-500 transition-colors cursor-pointer text-left sm:text-center"
+              className={`p-3 rounded-lg border transition-colors cursor-pointer text-left sm:text-center ${
+                currentTheme === 'burgundy'
+                  ? 'bg-white border-[#EADCD4] hover:border-[#6B1D2F]'
+                  : 'bg-white dark:bg-slate-800 dark:border-slate-700 hover:border-blue-500'
+              }`}
             >
               <div className="font-serif-display font-bold text-lg text-slate-900 dark:text-white">2025</div>
               <div className="text-[11px] text-slate-500">Treasurer & Senior Advisor</div>

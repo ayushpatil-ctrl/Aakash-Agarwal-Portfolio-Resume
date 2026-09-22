@@ -98,6 +98,8 @@ export default function SkillsSection({ skillGroups, currentTheme }: SkillsSecti
                 ? 'text-slate-400'
                 : currentTheme === 'emerald'
                 ? 'text-[#48574c]'
+                : currentTheme === 'burgundy'
+                ? 'text-[#5C524A]'
                 : 'text-slate-600'
             }`}
           >
@@ -113,6 +115,8 @@ export default function SkillsSection({ skillGroups, currentTheme }: SkillsSecti
               ? 'bg-slate-900/90 border-slate-800'
               : currentTheme === 'emerald'
               ? 'bg-[#faf7f2] border-[#e4ddd0]'
+              : currentTheme === 'burgundy'
+              ? 'bg-white border-[#E7E0D6] shadow-2xs'
               : 'bg-white border-slate-200 shadow-2xs'
           }`}
         >
@@ -125,7 +129,11 @@ export default function SkillsSection({ skillGroups, currentTheme }: SkillsSecti
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search skills (e.g., Leadership, Chemistry, Media, Python, Event)..."
-              className="w-full pl-10 pr-9 py-2 rounded-xl text-sm border bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all placeholder:text-slate-400 border-slate-200 dark:border-slate-700"
+              className={`w-full pl-10 pr-9 py-2 rounded-xl text-sm border bg-transparent focus:outline-none transition-all placeholder:text-slate-400 ${
+                currentTheme === 'burgundy'
+                  ? 'border-[#E7E0D6] focus:ring-2 focus:ring-[#6B1D2F]'
+                  : 'border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-blue-500'
+              }`}
             />
             {searchQuery && (
               <button
@@ -150,7 +158,11 @@ export default function SkillsSection({ skillGroups, currentTheme }: SkillsSecti
                     ? 'bg-blue-600 text-white'
                     : currentTheme === 'emerald'
                     ? 'bg-[#1b4332] text-white'
+                    : currentTheme === 'burgundy'
+                    ? 'bg-[#6B1D2F] text-white shadow-xs'
                     : 'bg-slate-900 text-white'
+                  : currentTheme === 'burgundy'
+                  ? 'bg-[#F2EAE4] text-[#5C524A] hover:bg-[#EAE1D9]'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
               }`}
             >
@@ -170,7 +182,11 @@ export default function SkillsSection({ skillGroups, currentTheme }: SkillsSecti
                         ? 'bg-blue-600 text-white'
                         : currentTheme === 'emerald'
                         ? 'bg-[#1b4332] text-white'
+                        : currentTheme === 'burgundy'
+                        ? 'bg-[#6B1D2F] text-white shadow-xs'
                         : 'bg-slate-900 text-white'
+                      : currentTheme === 'burgundy'
+                      ? 'bg-[#F2EAE4] text-[#5C524A] hover:bg-[#EAE1D9]'
                       : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
                   }`}
                 >
@@ -190,12 +206,16 @@ export default function SkillsSection({ skillGroups, currentTheme }: SkillsSecti
                 ? 'bg-blue-950/40 border-blue-800/80 text-slate-100'
                 : currentTheme === 'emerald'
                 ? 'bg-[#f1f7f2] border-[#b9dbbe] text-[#14321e]'
+                : currentTheme === 'burgundy'
+                ? 'bg-[#F7EFEA] border-[#EADCD4] text-[#4A423B]'
                 : 'bg-blue-50/80 border-blue-300 text-blue-950'
             }`}
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 mt-0.5">
+                <div className={`w-10 h-10 rounded-xl text-white flex items-center justify-center shrink-0 mt-0.5 ${
+                  currentTheme === 'burgundy' ? 'bg-[#6B1D2F]' : 'bg-blue-600'
+                }`}>
                   <Sparkles className="w-5 h-5" />
                 </div>
                 <div>
@@ -230,7 +250,9 @@ export default function SkillsSection({ skillGroups, currentTheme }: SkillsSecti
             </div>
 
             {/* Quick Actions for Selected Skill */}
-            <div className="mt-4 pt-3 border-t border-blue-200 dark:border-blue-900/60 flex flex-wrap items-center justify-between gap-3 text-xs">
+            <div className={`mt-4 pt-3 border-t flex flex-wrap items-center justify-between gap-3 text-xs ${
+              currentTheme === 'burgundy' ? 'border-[#EADCD4]' : 'border-blue-200 dark:border-blue-900/60'
+            }`}>
               <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                 <span>Verified across research fellowships, board honors, and MUN secretariats.</span>
@@ -239,7 +261,11 @@ export default function SkillsSection({ skillGroups, currentTheme }: SkillsSecti
                 <button
                   type="button"
                   onClick={() => handleJumpToSection('experience')}
-                  className="inline-flex items-center gap-1 font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+                  className={`inline-flex items-center gap-1 font-semibold hover:underline ${
+                    currentTheme === 'burgundy'
+                      ? 'text-[#6B1D2F]'
+                      : 'text-blue-600 dark:text-blue-400'
+                  }`}
                 >
                   View Related Internships <ArrowRight className="w-3.5 h-3.5" />
                 </button>
@@ -247,7 +273,11 @@ export default function SkillsSection({ skillGroups, currentTheme }: SkillsSecti
                 <button
                   type="button"
                   onClick={() => handleJumpToSection('mun')}
-                  className="inline-flex items-center gap-1 font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+                  className={`inline-flex items-center gap-1 font-semibold hover:underline ${
+                    currentTheme === 'burgundy'
+                      ? 'text-[#6B1D2F]'
+                      : 'text-blue-600 dark:text-blue-400'
+                  }`}
                 >
                   View Model UN Record <ArrowRight className="w-3.5 h-3.5" />
                 </button>
@@ -298,6 +328,8 @@ export default function SkillsSection({ skillGroups, currentTheme }: SkillsSecti
                       ? 'bg-slate-900/80 border-slate-800'
                       : currentTheme === 'emerald'
                       ? 'bg-white border-[#e6e0d5]'
+                      : currentTheme === 'burgundy'
+                      ? 'bg-white border-[#E7E0D6] shadow-2xs'
                       : 'bg-white border-slate-200 shadow-xs'
                   }`}
                 >
@@ -310,6 +342,8 @@ export default function SkillsSection({ skillGroups, currentTheme }: SkillsSecti
                             ? 'bg-blue-600/20 text-blue-400 border border-blue-500/30'
                             : currentTheme === 'emerald'
                             ? 'bg-[#eaf3ec] text-[#1b4332] border border-[#cfe0d2]'
+                            : currentTheme === 'burgundy'
+                            ? 'bg-[#F7EFEA] text-[#6B1D2F] border border-[#EADCD4]'
                             : 'bg-slate-100 text-slate-800 border border-slate-200'
                         }`}
                       >
@@ -350,20 +384,30 @@ export default function SkillsSection({ skillGroups, currentTheme }: SkillsSecti
                                   ? 'bg-blue-900/40 border-blue-500 ring-2 ring-blue-500/30'
                                   : currentTheme === 'emerald'
                                   ? 'bg-[#eef5ef] border-[#1b4332] ring-2 ring-[#1b4332]/20'
+                                  : currentTheme === 'burgundy'
+                                  ? 'bg-[#F7EFEA] border-[#6B1D2F] ring-2 ring-[#6B1D2F]/20'
                                   : 'bg-blue-50/90 border-blue-600 ring-2 ring-blue-600/20'
                                 : currentTheme === 'obsidian'
                                 ? 'bg-slate-800/60 border-slate-700/80 hover:bg-slate-800 hover:border-slate-600'
                                 : currentTheme === 'emerald'
                                 ? 'bg-[#fbf9f5] border-[#eae3d5] hover:bg-[#f6f2e8] hover:border-[#dfd6c6]'
+                                : currentTheme === 'burgundy'
+                                ? 'bg-[#FAF7F2] border-[#E8E1D7] hover:bg-[#F2EAE4] hover:border-[#D5C9BE]'
                                 : 'bg-slate-50 border-slate-200/80 hover:bg-slate-100/80 hover:border-slate-300'
                             }`}
                           >
                             <div className="flex items-center justify-between gap-2 mb-1 w-full">
-                              <span className="font-semibold text-sm text-slate-900 dark:text-white flex items-center gap-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                              <span className={`font-semibold text-sm text-slate-900 dark:text-white flex items-center gap-2 transition-colors ${
+                                currentTheme === 'burgundy' ? 'group-hover:text-[#6B1D2F]' : 'group-hover:text-blue-600 dark:group-hover:text-blue-400'
+                              }`}>
                                 <span
                                   className={`w-2 h-2 rounded-full transition-all ${
                                     isSelected
-                                      ? 'bg-blue-600 scale-125'
+                                      ? currentTheme === 'burgundy'
+                                        ? 'bg-[#6B1D2F] scale-125'
+                                        : 'bg-blue-600 scale-125'
+                                      : currentTheme === 'burgundy'
+                                      ? 'bg-slate-400 group-hover:bg-[#6B1D2F]'
                                       : 'bg-slate-400 group-hover:bg-blue-600'
                                   }`}
                                 />
@@ -373,15 +417,21 @@ export default function SkillsSection({ skillGroups, currentTheme }: SkillsSecti
                                 <span
                                   className={`text-[11px] font-mono px-2 py-0.5 rounded border transition-colors ${
                                     skill.level.includes('99') || skill.level.includes('96')
-                                      ? 'bg-amber-100 border-amber-300 text-amber-900 font-bold'
+                                      ? currentTheme === 'burgundy'
+                                        ? 'bg-[#F7EFEA] border-[#EADCD4] text-[#6B1D2F] font-bold'
+                                        : 'bg-amber-100 border-amber-300 text-amber-900 font-bold'
                                       : currentTheme === 'obsidian'
                                       ? 'bg-slate-700 border-slate-600 text-slate-300'
+                                      : currentTheme === 'burgundy'
+                                      ? 'bg-white border-[#EADCD4] text-[#5C524A]'
                                       : 'bg-white border-slate-200 text-slate-700'
                                   }`}
                                 >
                                   {skill.level}
                                 </span>
-                                <span className="text-[10px] text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                                <span className={`text-[10px] text-slate-400 ${
+                                  currentTheme === 'burgundy' ? 'group-hover:text-[#6B1D2F]' : 'group-hover:text-blue-600 dark:group-hover:text-blue-400'
+                                }`}>
                                   {isSelected ? 'Selected' : 'Inspect'}
                                 </span>
                               </div>

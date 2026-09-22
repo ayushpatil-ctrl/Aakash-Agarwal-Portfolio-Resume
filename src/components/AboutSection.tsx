@@ -95,6 +95,8 @@ export default function AboutSection({ profile, currentTheme }: AboutSectionProp
                 ? 'text-slate-400'
                 : currentTheme === 'emerald'
                 ? 'text-[#48574c]'
+                : currentTheme === 'burgundy'
+                ? 'text-[#5C524A]'
                 : 'text-slate-600'
             }`}
           >
@@ -115,6 +117,8 @@ export default function AboutSection({ profile, currentTheme }: AboutSectionProp
                     ? 'bg-slate-900/80 border-slate-800 hover:border-slate-700'
                     : currentTheme === 'emerald'
                     ? 'bg-white border-[#e6e0d5] hover:border-[#cfc6b8]'
+                    : currentTheme === 'burgundy'
+                    ? 'bg-white border-[#E7E0D6] hover:border-[#D5C9BE] shadow-2xs'
                     : 'bg-white border-slate-200 hover:border-slate-300 shadow-xs'
                 }`}
               >
@@ -126,6 +130,8 @@ export default function AboutSection({ profile, currentTheme }: AboutSectionProp
                           ? 'bg-blue-600/20 text-blue-400 border border-blue-500/30'
                           : currentTheme === 'emerald'
                           ? 'bg-[#eaf3ec] text-[#1b4332] border border-[#cfe0d2]'
+                          : currentTheme === 'burgundy'
+                          ? 'bg-[#F7EFEA] text-[#6B1D2F] border border-[#EADCD4]'
                           : 'bg-slate-100 text-slate-800 border border-slate-200'
                       }`}
                     >
@@ -149,7 +155,13 @@ export default function AboutSection({ profile, currentTheme }: AboutSectionProp
                   <button
                     type="button"
                     onClick={() => scrollToSection(pillar.targetId)}
-                    className="inline-flex items-center gap-1 font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+                    className={`inline-flex items-center gap-1 font-semibold hover:underline ${
+                      currentTheme === 'burgundy'
+                        ? 'text-[#6B1D2F]'
+                        : currentTheme === 'emerald'
+                        ? 'text-[#1b4332]'
+                        : 'text-blue-600 dark:text-blue-400'
+                    }`}
                   >
                     <span>Inspect Domain</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -169,11 +181,19 @@ export default function AboutSection({ profile, currentTheme }: AboutSectionProp
               ? 'bg-slate-900/60 border-slate-800'
               : currentTheme === 'emerald'
               ? 'bg-[#faf8f4] border-[#e4ddd0]'
+              : currentTheme === 'burgundy'
+              ? 'bg-[#FAF7F2] border-[#E7E0D6]'
               : 'bg-slate-50/80 border-slate-200'
           }`}
         >
           <div className="flex items-center gap-2 mb-4">
-            <HelpCircle className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+            <HelpCircle className={`w-4 h-4 ${
+              currentTheme === 'burgundy'
+                ? 'text-[#6B1D2F]'
+                : currentTheme === 'emerald'
+                ? 'text-[#1b4332]'
+                : 'text-blue-600 dark:text-blue-400'
+            }`} />
             <h3 className="font-serif-display font-bold text-lg">
               Quick Candidate Briefing (Interactive FAQ)
             </h3>
@@ -188,6 +208,8 @@ export default function AboutSection({ profile, currentTheme }: AboutSectionProp
                   className={`rounded-xl border transition-all overflow-hidden ${
                     currentTheme === 'obsidian'
                       ? 'bg-slate-800/80 border-slate-700'
+                      : currentTheme === 'burgundy'
+                      ? 'bg-white border-[#E7E0D6]'
                       : 'bg-white border-slate-200'
                   }`}
                 >
@@ -210,7 +232,13 @@ export default function AboutSection({ profile, currentTheme }: AboutSectionProp
                       <button
                         type="button"
                         onClick={() => scrollToSection(q.jumpSection)}
-                        className="mt-3 inline-flex items-center gap-1.5 font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+                        className={`mt-3 inline-flex items-center gap-1.5 font-semibold hover:underline ${
+                          currentTheme === 'burgundy'
+                            ? 'text-[#6B1D2F]'
+                            : currentTheme === 'emerald'
+                            ? 'text-[#1b4332]'
+                            : 'text-blue-600 dark:text-blue-400'
+                        }`}
                       >
                         <span>{q.jumpLabel}</span>
                         <ArrowRight className="w-3.5 h-3.5" />

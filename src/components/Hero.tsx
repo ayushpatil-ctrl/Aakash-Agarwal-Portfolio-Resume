@@ -41,6 +41,8 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
                 ? 'bg-slate-800 border-slate-700 text-slate-300'
                 : currentTheme === 'emerald'
                 ? 'bg-[#f0ebe3] border-[#ded7cb] text-[#425046]'
+                : currentTheme === 'burgundy'
+                ? 'bg-[#F4ECE8] border-[#E8DDD6] text-[#5C524A]'
                 : 'bg-slate-100 border-slate-200 text-slate-700'
             }`}
           >
@@ -75,6 +77,8 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
                     ? 'text-blue-300'
                     : currentTheme === 'emerald'
                     ? 'text-[#1b4332]'
+                    : currentTheme === 'burgundy'
+                    ? 'text-[#6B1D2F]'
                     : 'text-slate-800'
                 }`}
               >
@@ -89,6 +93,8 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
                     ? 'bg-slate-900/80 border-slate-800 text-slate-300'
                     : currentTheme === 'emerald'
                     ? 'bg-[#fcfbf9] border-[#e8e2d8] text-[#334237]'
+                    : currentTheme === 'burgundy'
+                    ? 'bg-white border-[#E7E0D6] text-[#4A423B] shadow-2xs'
                     : 'bg-white border-slate-200 text-slate-700 shadow-xs'
                 }`}
               >
@@ -113,6 +119,8 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
                     ? 'bg-slate-800 border-slate-700 text-slate-200 hover:bg-slate-700'
                     : currentTheme === 'emerald'
                     ? 'bg-white border-[#dfd8cb] text-[#243228] hover:bg-[#f6f2ea]'
+                    : currentTheme === 'burgundy'
+                    ? 'bg-white border-[#E7E0D6] text-[#231E1C] hover:bg-[#F7EFEA]'
                     : 'bg-white border-slate-300 text-slate-800 hover:bg-slate-50'
                 }`}
               >
@@ -138,6 +146,8 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
                     ? 'bg-slate-800 border-slate-700 text-slate-200 hover:bg-slate-700'
                     : currentTheme === 'emerald'
                     ? 'bg-white border-[#dfd8cb] text-[#243228] hover:bg-[#f6f2ea]'
+                    : currentTheme === 'burgundy'
+                    ? 'bg-white border-[#E7E0D6] text-[#231E1C] hover:bg-[#F7EFEA]'
                     : 'bg-white border-slate-300 text-slate-800 hover:bg-slate-50'
                 }`}
               >
@@ -157,6 +167,8 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
                   ? 'bg-slate-900/90 border-slate-800'
                   : currentTheme === 'emerald'
                   ? 'bg-white border-[#e3ded4] shadow-xs'
+                  : currentTheme === 'burgundy'
+                  ? 'bg-white border-[#E7E0D6] shadow-2xs'
                   : 'bg-white border-slate-200 shadow-sm'
               }`}
             >
@@ -171,6 +183,8 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
                         ? 'text-slate-400'
                         : currentTheme === 'emerald'
                         ? 'text-[#5f6e62]'
+                        : currentTheme === 'burgundy'
+                        ? 'text-[#6F665E]'
                         : 'text-slate-500'
                     }`}
                   >
@@ -190,6 +204,8 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
                       ? 'bg-slate-800/80 border-slate-700'
                       : currentTheme === 'emerald'
                       ? 'bg-[#faf8f4] border-[#e8e3d8]'
+                      : currentTheme === 'burgundy'
+                      ? 'bg-[#FAF7F2] border-[#E8E1D7]'
                       : 'bg-slate-50 border-slate-200'
                   }`}
                 >
@@ -221,6 +237,8 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
                       ? 'bg-slate-800/80 border-slate-700'
                       : currentTheme === 'emerald'
                       ? 'bg-[#faf8f4] border-[#e8e3d8]'
+                      : currentTheme === 'burgundy'
+                      ? 'bg-[#FAF7F2] border-[#E8E1D7]'
                       : 'bg-slate-50 border-slate-200'
                   }`}
                 >
@@ -270,6 +288,8 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
                     ? 'bg-slate-900/60 border-slate-800'
                     : currentTheme === 'emerald'
                     ? 'bg-white border-[#e6e1d7]'
+                    : currentTheme === 'burgundy'
+                    ? 'bg-white border-[#E7E0D6] shadow-2xs'
                     : 'bg-white border-slate-200 shadow-2xs'
                 }`}
               >
