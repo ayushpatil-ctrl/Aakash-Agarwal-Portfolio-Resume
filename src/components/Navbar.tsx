@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import { Menu, X, FileText, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronRight } from 'lucide-react';
 import { ThemeMode } from '../types';
 import { themes } from '../data/portfolioData';
 
 interface NavbarProps {
   currentTheme?: ThemeMode;
   onThemeChange?: (theme: ThemeMode) => void;
-  onOpenResume: () => void;
+  onOpenResume?: () => void;
 }
 
-export default function Navbar({ currentTheme = 'burgundy', onOpenResume }: NavbarProps) {
+export default function Navbar({ currentTheme = 'burgundy' }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const theme = themes[currentTheme];
 
@@ -50,7 +50,7 @@ export default function Navbar({ currentTheme = 'burgundy', onOpenResume }: Navb
         </a>
 
         {/* Desktop Nav Links */}
-        <nav id="desktop-nav" className="hidden md:flex items-center gap-6">
+        <nav id="desktop-nav" className="hidden md:flex items-center gap-7">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -63,35 +63,13 @@ export default function Navbar({ currentTheme = 'burgundy', onOpenResume }: Navb
           ))}
         </nav>
 
-        {/* Action Controls: Resume Button */}
-        <div className="hidden lg:flex items-center gap-3">
-          {/* View / Print Resume Button */}
-          <button
-            id="open-resume-btn-nav"
-            type="button"
-            onClick={onOpenResume}
-            className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-semibold tracking-wide border transition-all border-[#E2D4C8] bg-[#F7EFEA] text-[#6B1D2F] hover:bg-[#EFE4DC]"
-          >
-            <FileText className="w-3.5 h-3.5" />
-            <span>PDF Resume</span>
-          </button>
-        </div>
-
         {/* Mobile menu button */}
         <div className="flex items-center gap-2 md:hidden">
-          <button
-            id="mobile-resume-btn"
-            type="button"
-            onClick={onOpenResume}
-            className="p-2 rounded-lg border text-xs font-medium"
-          >
-            <FileText className="w-4 h-4" />
-          </button>
           <button
             id="mobile-menu-toggle-btn"
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 rounded-lg border focus:outline-none"
+            className="p-2 rounded-lg border border-[#E7E0D6] text-[#231E1C] hover:bg-[#F2EAE4] focus:outline-none"
             aria-label="Toggle Navigation Menu"
           >
             {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

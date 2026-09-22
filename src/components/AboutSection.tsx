@@ -6,7 +6,7 @@ import { themes } from '../data/portfolioData';
 interface AboutSectionProps {
   profile: ProfileData;
   currentTheme: ThemeMode;
-  onOpenResume: () => void;
+  onOpenResume?: () => void;
 }
 
 export default function AboutSection({ profile, currentTheme }: AboutSectionProps) {

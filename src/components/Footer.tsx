@@ -5,10 +5,10 @@ import { themes } from '../data/portfolioData';
 interface FooterProps {
   profile: ProfileData;
   currentTheme: ThemeMode;
-  onOpenResume: () => void;
+  onOpenResume?: () => void;
 }
 
-export default function Footer({ profile, currentTheme, onOpenResume }: FooterProps) {
+export default function Footer({ profile, currentTheme }: FooterProps) {
   const theme = themes[currentTheme];
 
   const scrollToTop = () => {
@@ -18,61 +18,32 @@ export default function Footer({ profile, currentTheme, onOpenResume }: FooterPr
   return (
     <footer
       id="main-footer"
-      className={`py-12 border-t transition-colors duration-200 ${
-        currentTheme === 'obsidian'
-          ? 'bg-[#080b12] border-slate-800 text-slate-400'
-          : currentTheme === 'emerald'
-          ? 'bg-[#f7f4ed] border-[#ded7ca] text-[#425046]'
-          : currentTheme === 'burgundy'
-          ? 'bg-[#F2EAE4] border-[#E5DAD0] text-[#5C524A]'
-          : 'bg-slate-50 border-slate-200 text-slate-600'
-      }`}
+      className="py-12 border-t transition-colors duration-200 bg-[#F2EAE4] border-[#E5DAD0] text-[#5C524A]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b ${
-          currentTheme === 'burgundy' ? 'border-[#EADCD4]' : 'border-slate-200/60 dark:border-slate-800'
-        }`}>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#EADCD4]">
           <div className="flex items-center gap-3">
             <div
-              className={`w-9 h-9 rounded-lg flex items-center justify-center font-bold text-xs tracking-wider ${
-                currentTheme === 'obsidian'
-                  ? 'bg-blue-600 text-white'
-                  : currentTheme === 'emerald'
-                  ? 'bg-[#1b4332] text-white'
-                  : currentTheme === 'burgundy'
-                  ? 'bg-[#6B1D2F] text-white'
-                  : 'bg-slate-900 text-white'
-              }`}
+              className="w-9 h-9 rounded-lg flex items-center justify-center font-bold text-xs tracking-wider bg-[#6B1D2F] text-white"
             >
               AA
             </div>
             <div>
-              <div className="font-serif-display font-bold text-base text-slate-900 dark:text-white">
+              <div className="font-serif-display font-bold text-base text-[#231E1C]">
                 {profile.name}
               </div>
-              <div className="text-xs">
+              <div className="text-xs text-[#6F665E]">
                 {profile.role} · Ghaziabad / Delhi NCR
               </div>
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-6 text-xs font-medium">
-            <a href="#about" className="hover:underline">About</a>
-            <a href="#education" className="hover:underline">Education</a>
-            <a href="#experience" className="hover:underline">Experience</a>
-            <a href="#mun" className="hover:underline">Model UN</a>
-            <a href="#skills" className="hover:underline">Skills</a>
-            <button
-              type="button"
-              onClick={onOpenResume}
-              className={`font-semibold hover:underline ${
-                currentTheme === 'burgundy'
-                  ? 'text-[#6B1D2F]'
-                  : 'text-blue-600 dark:text-blue-400'
-              }`}
-            >
-              View Full Resume
-            </button>
+          <div className="flex flex-wrap items-center gap-6 text-xs font-medium text-[#5C524A]">
+            <a href="#about" className="hover:underline hover:text-[#6B1D2F]">About</a>
+            <a href="#education" className="hover:underline hover:text-[#6B1D2F]">Education</a>
+            <a href="#experience" className="hover:underline hover:text-[#6B1D2F]">Experience</a>
+            <a href="#mun" className="hover:underline hover:text-[#6B1D2F]">Model UN</a>
+            <a href="#skills" className="hover:underline hover:text-[#6B1D2F]">Skills</a>
           </div>
 
           <button

@@ -7,7 +7,6 @@ import ExperienceSection from './components/ExperienceSection';
 import MUNVitaeSection from './components/MUNVitaeSection';
 import SkillsSection from './components/SkillsSection';
 import Footer from './components/Footer';
-import ResumeModal from './components/ResumeModal';
 import QuickFinderModal from './components/QuickFinderModal';
 import ScrollProgressIndicator from './components/ScrollProgressIndicator';
 
@@ -24,7 +23,6 @@ import { ThemeMode } from './types';
 export default function App() {
   const currentTheme: ThemeMode = 'burgundy';
 
-  const [isResumeOpen, setIsResumeOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const theme = themes[currentTheme];
@@ -59,7 +57,6 @@ export default function App() {
       {/* Sticky Top Navigation */}
       <Navbar
         currentTheme={currentTheme}
-        onOpenResume={() => setIsResumeOpen(true)}
       />
 
       {/* Main Content Sections */}
@@ -68,14 +65,12 @@ export default function App() {
         <Hero
           profile={profileData}
           currentTheme={currentTheme}
-          onOpenResume={() => setIsResumeOpen(true)}
         />
 
         {/* Narrative About & Trajectory */}
         <AboutSection
           profile={profileData}
           currentTheme={currentTheme}
-          onOpenResume={() => setIsResumeOpen(true)}
         />
 
         {/* Education & Academic Honors */}
@@ -107,7 +102,6 @@ export default function App() {
       <Footer
         profile={profileData}
         currentTheme={currentTheme}
-        onOpenResume={() => setIsResumeOpen(true)}
       />
 
       {/* Interactive Spotlight Search Modal */}
@@ -120,17 +114,6 @@ export default function App() {
         skillGroups={skillsData}
         education={educationData}
         profile={profileData}
-      />
-
-      {/* Full Resume Modal (Printable & Copyable) */}
-      <ResumeModal
-        isOpen={isResumeOpen}
-        onClose={() => setIsResumeOpen(false)}
-        currentTheme={currentTheme}
-        profile={profileData}
-        education={educationData}
-        experiences={experienceData}
-        munItems={munData}
       />
     </div>
   );
