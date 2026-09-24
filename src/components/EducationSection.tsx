@@ -15,11 +15,11 @@ export default function EducationSection({ education, currentTheme }: EducationS
   const theme = themes[currentTheme];
 
   const subjectScores = [
-    { name: 'Computer Science (Class X)', score: 99, max: 100, label: '99/100 Top Percentile', note: 'Demonstrated computational thinking, logic structures & algorithm fundamentals.' },
-    { name: 'Social Studies (Class X)', score: 99, max: 100, label: '99/100 Top Percentile', note: 'Political systems, economic history, and parliamentary governance foundation.' },
-    { name: 'Chemistry (Class XII)', score: 96, max: 100, label: '96/100 Distinction', note: 'Physical chemistry, chemical thermodynamics, analytical equations & laboratory precision.' },
-    { name: 'CBSE Class X Aggregate', score: 94.8, max: 100, label: '94.8% Overall', note: 'Ranked in top scholastic tier across Seth Anandram Jaipuria School.' },
-    { name: 'CBSE Class XII Aggregate', score: 93.4, max: 100, label: '93.4% Science Stream', note: 'Rigorous PCM curriculum: Advanced Physics, Chemistry, and Mathematics.' },
+    { name: 'Computer Science (Class X)', score: 99, max: 100, label: '99/100 Top Marks', note: 'Programming basics, coding logic, and algorithmic thinking.' },
+    { name: 'Social Studies (Class X)', score: 99, max: 100, label: '99/100 Top Marks', note: 'Civics, economics, history, and world governance.' },
+    { name: 'Chemistry (Class XII)', score: 96, max: 100, label: '96/100 Distinction', note: 'Chemical equations, formulas, and hands-on laboratory experiments.' },
+    { name: 'CBSE Class X Overall', score: 94.8, max: 100, label: '94.8% Overall', note: 'Among the highest-scoring students in school.' },
+    { name: 'CBSE Class XII Overall', score: 93.4, max: 100, label: '93.4% Science Stream', note: 'PCM stream: Physics, Chemistry, and Mathematics.' },
   ];
 
   return (
@@ -35,14 +35,14 @@ export default function EducationSection({ education, currentTheme }: EducationS
               className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase border ${theme.badgeBg}`}
             >
               <GraduationCap className="w-3.5 h-3.5" />
-              Academic Foundation & Scholastic Honors
+              Schooling & Academic Marks
             </span>
           </div>
           <h2
             id="education-heading"
             className="font-serif-display text-3xl sm:text-4xl font-bold tracking-tight mb-4"
           >
-            Education & Board Honors
+            Education & Board Marks
           </h2>
           <p
             className={`text-base sm:text-lg leading-relaxed ${
@@ -55,7 +55,7 @@ export default function EducationSection({ education, currentTheme }: EducationS
                 : 'text-slate-600'
             }`}
           >
-            Demonstrated scholastic consistency across CBSE Board examinations with peak performance in Computer Science, Chemistry, and Analytical Sciences.
+            Strong academic track record in CBSE board examinations, with top scores of 99/100 in Computer Science and 96/100 in Chemistry.
           </p>
         </div>
 
@@ -94,27 +94,27 @@ export default function EducationSection({ education, currentTheme }: EducationS
                       ? 'text-[#6B1D2F]'
                       : 'text-blue-600 dark:text-blue-400'
                   }`}>
-                    Higher Education Pursuit
+                    Current Degree
                   </span>
                   <span className={`text-xs px-2 py-0.5 rounded font-medium ${
                     currentTheme === 'burgundy'
                       ? 'bg-[#FAF7F2] text-[#6B1D2F] border border-[#EADCD4]'
                       : 'bg-emerald-100 text-emerald-800'
                   }`}>
-                    Freshman Year
+                    1st Year Student
                   </span>
                 </div>
                 <h3 className="font-serif-display text-xl sm:text-2xl font-bold mt-1">
                   Bachelor of Technology (B.Tech)
                 </h3>
                 <p className="text-sm font-medium text-slate-600 dark:text-slate-300">
-                  Engineering & Applied Sciences Focus
+                  Focus on Technology, Coding & Applied Sciences
                 </p>
               </div>
             </div>
 
             <div className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 md:text-right max-w-sm">
-              Focusing on the convergence of foundational sciences, computational analysis, and practical engineering solutions.
+              Learning programming, core mathematics, and science principles to build real-world software and engineering projects.
             </div>
           </div>
         </div>
@@ -130,19 +130,19 @@ export default function EducationSection({ education, currentTheme }: EducationS
             className={`px-4 py-2 rounded-lg text-xs font-semibold tracking-wide transition-all flex items-center gap-2 ${
               activeTab === 'cards'
                 ? currentTheme === 'obsidian'
-                  ? 'bg-blue-600 text-white shadow-xs'
-                  : currentTheme === 'emerald'
-                  ? 'bg-[#1b4332] text-white shadow-xs'
-                  : currentTheme === 'burgundy'
-                  ? 'bg-[#6B1D2F] text-white shadow-xs'
-                  : 'bg-slate-900 text-white shadow-xs'
+                ? 'bg-blue-600 text-white shadow-xs'
+                : currentTheme === 'emerald'
+                ? 'bg-[#1b4332] text-white shadow-xs'
                 : currentTheme === 'burgundy'
-                ? 'bg-[#F2EAE4] text-[#5C524A] hover:bg-[#EAE1D9]'
-                : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
+                ? 'bg-[#6B1D2F] text-white shadow-xs'
+                : 'bg-slate-900 text-white shadow-xs'
+              : currentTheme === 'burgundy'
+              ? 'bg-[#F2EAE4] text-[#5C524A] hover:bg-[#EAE1D9]'
+              : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
             }`}
           >
             <BookOpen className="w-3.5 h-3.5" />
-            <span>Curriculum & Board Cards</span>
+            <span>Report Cards & Highlights</span>
           </button>
 
           <button
@@ -151,19 +151,19 @@ export default function EducationSection({ education, currentTheme }: EducationS
             className={`px-4 py-2 rounded-lg text-xs font-semibold tracking-wide transition-all flex items-center gap-2 ${
               activeTab === 'breakdown'
                 ? currentTheme === 'obsidian'
-                  ? 'bg-blue-600 text-white shadow-xs'
-                  : currentTheme === 'emerald'
-                  ? 'bg-[#1b4332] text-white shadow-xs'
-                  : currentTheme === 'burgundy'
-                  ? 'bg-[#6B1D2F] text-white shadow-xs'
-                  : 'bg-slate-900 text-white shadow-xs'
+                ? 'bg-blue-600 text-white shadow-xs'
+                : currentTheme === 'emerald'
+                ? 'bg-[#1b4332] text-white shadow-xs'
                 : currentTheme === 'burgundy'
-                ? 'bg-[#F2EAE4] text-[#5C524A] hover:bg-[#EAE1D9]'
-                : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
+                ? 'bg-[#6B1D2F] text-white shadow-xs'
+                : 'bg-slate-900 text-white shadow-xs'
+              : currentTheme === 'burgundy'
+              ? 'bg-[#F2EAE4] text-[#5C524A] hover:bg-[#EAE1D9]'
+              : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
             }`}
           >
             <BarChart2 className="w-3.5 h-3.5" />
-            <span>Interactive Marks Visualizer</span>
+            <span>Subject Marks Chart</span>
           </button>
 
           <button
@@ -172,19 +172,19 @@ export default function EducationSection({ education, currentTheme }: EducationS
             className={`px-4 py-2 rounded-lg text-xs font-semibold tracking-wide transition-all flex items-center gap-2 ${
               activeTab === 'equivalency'
                 ? currentTheme === 'obsidian'
-                  ? 'bg-blue-600 text-white shadow-xs'
-                  : currentTheme === 'emerald'
-                  ? 'bg-[#1b4332] text-white shadow-xs'
-                  : currentTheme === 'burgundy'
-                  ? 'bg-[#6B1D2F] text-white shadow-xs'
-                  : 'bg-slate-900 text-white shadow-xs'
+                ? 'bg-blue-600 text-white shadow-xs'
+                : currentTheme === 'emerald'
+                ? 'bg-[#1b4332] text-white shadow-xs'
                 : currentTheme === 'burgundy'
-                ? 'bg-[#F2EAE4] text-[#5C524A] hover:bg-[#EAE1D9]'
-                : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
+                ? 'bg-[#6B1D2F] text-white shadow-xs'
+                : 'bg-slate-900 text-white shadow-xs'
+              : currentTheme === 'burgundy'
+              ? 'bg-[#F2EAE4] text-[#5C524A] hover:bg-[#EAE1D9]'
+              : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
             }`}
           >
             <Calculator className="w-3.5 h-3.5" />
-            <span>International Equivalency</span>
+            <span>GPA & Global Equivalents</span>
           </button>
         </div>
 
@@ -414,10 +414,10 @@ export default function EducationSection({ education, currentTheme }: EducationS
           >
             <div className="max-w-2xl mb-6">
               <h3 className="font-serif-display text-2xl font-bold mb-2">
-                International Grading Equivalency & Standing
+                Global Grade Equivalents
               </h3>
               <p className="text-sm text-slate-500 dark:text-slate-400">
-                A guide for international admissions committees, research coordinators, and global talent reviewers evaluating Indian CBSE board marks.
+                How Indian CBSE board percentages compare to US GPA and UK university grading scales.
               </p>
             </div>
 
@@ -438,7 +438,7 @@ export default function EducationSection({ education, currentTheme }: EducationS
                   3.9 – 4.0 GPA
                 </div>
                 <div className="text-xs text-slate-500 mt-1">
-                  Grade "A1" across assessed subjects. Top 1/8th of passed candidates.
+                  Equivalent to straight A's and top scholastic tier.
                 </div>
               </div>
 
@@ -458,7 +458,7 @@ export default function EducationSection({ education, currentTheme }: EducationS
                   First Class
                 </div>
                 <div className="text-xs text-slate-500 mt-1">
-                  First Class with Distinction benchmark (above standard 70% threshold).
+                  Equivalent to First Class with Distinction (well above 70%).
                 </div>
               </div>
 
@@ -478,7 +478,7 @@ export default function EducationSection({ education, currentTheme }: EducationS
                   Top 2%
                 </div>
                 <div className="text-xs text-slate-500 mt-1">
-                  Distinction in Chemistry (96) and Computer Science (99).
+                  Top marks nationwide in Computer Science (99) and Chemistry (96).
                 </div>
               </div>
             </div>
@@ -492,8 +492,8 @@ export default function EducationSection({ education, currentTheme }: EducationS
                 currentTheme === 'burgundy' ? 'text-[#6B1D2F]' : 'text-blue-600'
               }`} />
               <div>
-                <span className="font-semibold">CBSE Rigor Note: </span>
-                The Central Board of Secondary Education (CBSE) is India's premier national board curriculum. Scoring above 90% is traditionally recognized as the distinction benchmark required for elite engineering and research institution placement.
+                <span className="font-semibold">About CBSE Board Exams: </span>
+                CBSE is India's premier national school education board. Scoring above 90% represents distinction marks, typically placing a student in the top academic tier for engineering admissions.
               </div>
             </div>
           </div>

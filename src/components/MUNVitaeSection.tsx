@@ -51,17 +51,17 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
 
   const filterTabs = [
     { id: 'all', label: 'All Roles', count: munItems.length },
-    { id: 'secretariat', label: 'Secretariat Leadership', count: munItems.filter((i) => i.category === 'secretariat').length },
-    { id: 'executive-board', label: 'Executive Board', count: munItems.filter((i) => i.category === 'executive-board').length },
-    { id: 'teamwork', label: 'Finance & Operations', count: munItems.filter((i) => i.category === 'teamwork').length },
-    { id: 'delegate', label: 'Delegate Delegations', count: munItems.filter((i) => i.category === 'delegate').length },
+    { id: 'secretariat', label: 'Lead Organizing', count: munItems.filter((i) => i.category === 'secretariat').length },
+    { id: 'executive-board', label: 'Committee Chairs (EB)', count: munItems.filter((i) => i.category === 'executive-board').length },
+    { id: 'teamwork', label: 'Finance & Teams', count: munItems.filter((i) => i.category === 'teamwork').length },
+    { id: 'delegate', label: 'Debate Delegate', count: munItems.filter((i) => i.category === 'delegate').length },
   ];
 
   const getCategoryBadge = (category: string) => {
     switch (category) {
       case 'secretariat':
         return {
-          label: 'Secretariat Executive',
+          label: 'Lead Organizer',
           bg: currentTheme === 'obsidian'
             ? 'bg-amber-950/60 border-amber-800 text-amber-300'
             : currentTheme === 'burgundy'
@@ -71,7 +71,7 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
         };
       case 'executive-board':
         return {
-          label: 'Executive Board (UNHRC)',
+          label: 'Committee Chair (UNHRC)',
           bg: currentTheme === 'obsidian'
             ? 'bg-purple-950/60 border-purple-800 text-purple-300'
             : currentTheme === 'burgundy'
@@ -85,13 +85,13 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
           bg: currentTheme === 'obsidian'
             ? 'bg-blue-950/60 border-blue-800 text-blue-300'
             : currentTheme === 'burgundy'
-            ? 'bg-[#FAF7F2] border-[#E7E0D6] text-[#5C524A]'
+            ? 'bg-[#F4ECE8] border-[#E8DDD6] text-[#5C524A]'
             : 'bg-blue-50 border-blue-200 text-blue-900',
           icon: Users,
         };
       default:
         return {
-          label: 'Parliamentary Delegate',
+          label: 'Delegate',
           bg: currentTheme === 'obsidian'
             ? 'bg-slate-800 border-slate-700 text-slate-300'
             : currentTheme === 'burgundy'
@@ -115,14 +115,14 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
               className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase border ${theme.badgeBg}`}
             >
               <Globe2 className="w-3.5 h-3.5" />
-              Diplomacy, Governance & Operations
+              Public Speaking & Event Leadership
             </span>
           </div>
           <h2
             id="mun-heading"
             className="font-serif-display text-3xl sm:text-4xl font-bold tracking-tight mb-4"
           >
-            Model UN & Leadership Vitae
+            Model UN & Student Leadership
           </h2>
           <p
             className={`text-base sm:text-lg leading-relaxed ${
@@ -135,7 +135,7 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
                 : 'text-slate-600'
             }`}
           >
-            A 6-year leadership progression across 13 conferences. Filter by category, year, or switch into the interactive chronological timeline.
+            6 years of public speaking, debate, and team leadership across 13 conferences. Filter by role or year, or view the timeline below.
           </p>
         </div>
 
@@ -153,7 +153,7 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
             }`}
           >
             <div className={`text-xl font-bold font-serif-display ${currentTheme === 'burgundy' ? 'text-[#6B1D2F]' : ''}`}>13</div>
-            <div className="text-xs text-slate-500 font-medium">Total Summits & MUNs</div>
+            <div className="text-xs text-slate-500 font-medium">Total Conferences</div>
           </div>
           <div
             className={`p-3.5 rounded-xl border transition-all ${
@@ -167,7 +167,7 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
             }`}
           >
             <div className={`text-xl font-bold font-serif-display ${currentTheme === 'burgundy' ? 'text-[#6B1D2F]' : ''}`}>3</div>
-            <div className="text-xs text-slate-500 font-medium">Secretariat Executive Posts</div>
+            <div className="text-xs text-slate-500 font-medium">Lead Organizer Roles</div>
           </div>
           <div
             className={`p-3.5 rounded-xl border transition-all ${
@@ -181,7 +181,7 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
             }`}
           >
             <div className={`text-xl font-bold font-serif-display ${currentTheme === 'burgundy' ? 'text-[#6B1D2F]' : ''}`}>6 Years</div>
-            <div className="text-xs text-slate-500 font-medium">Diplomatic Trajectory</div>
+            <div className="text-xs text-slate-500 font-medium">Debate Experience</div>
           </div>
           <div
             className={`p-3.5 rounded-xl border transition-all ${
@@ -195,7 +195,7 @@ export default function MUNVitaeSection({ munItems, currentTheme }: MUNVitaeSect
             }`}
           >
             <div className={`text-xl font-bold font-serif-display ${currentTheme === 'burgundy' ? 'text-[#6B1D2F]' : ''}`}>UNHRC</div>
-            <div className="text-xs text-slate-500 font-medium">Executive Board Adjudication</div>
+            <div className="text-xs text-slate-500 font-medium">Committee Rapporteur</div>
           </div>
         </div>
 

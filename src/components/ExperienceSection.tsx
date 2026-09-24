@@ -44,14 +44,14 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
               className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase border ${theme.badgeBg}`}
             >
               <Briefcase className="w-3.5 h-3.5" />
-              University Fellowships & On-Site Practice
+              Internships & Hands-On Programs
             </span>
           </div>
           <h2
             id="experience-heading"
             className="font-serif-display text-3xl sm:text-4xl font-bold tracking-tight mb-4"
           >
-            Academic & Media Internships
+            Research & Media Internships
           </h2>
           <p
             className={`text-base sm:text-lg leading-relaxed ${
@@ -64,7 +64,7 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
                 : 'text-slate-600'
             }`}
           >
-            Selected for intensive on-site university programs at Bennett University, developing dual expertise in faculty-led scientific research and investigative mass journalism.
+            Completed two on-site programs at Bennett University, learning academic research alongside professors and practicing news reporting, writing, and interviews.
           </p>
         </div>
 
@@ -95,7 +95,7 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
               }`}
             >
-              All Programs ({experiences.length})
+              All Internships ({experiences.length})
             </button>
 
             <button
@@ -119,7 +119,7 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
               }`}
             >
               <BrainCircuit className="w-3.5 h-3.5" />
-              <span>Scientific Research Intern</span>
+              <span>Summer Research</span>
             </button>
 
             <button
@@ -143,7 +143,7 @@ export default function ExperienceSection({ experiences, currentTheme }: Experie
               }`}
             >
               <Newspaper className="w-3.5 h-3.5" />
-              <span>Mass Media & Journalism</span>
+              <span>Media & Journalism</span>
             </button>
           </div>
 

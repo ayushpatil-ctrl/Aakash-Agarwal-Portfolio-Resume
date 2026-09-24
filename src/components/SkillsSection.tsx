@@ -83,14 +83,14 @@ export default function SkillsSection({ skillGroups, currentTheme }: SkillsSecti
               className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase border ${theme.badgeBg}`}
             >
               <Zap className="w-3.5 h-3.5" />
-              Interactive Skillset Explorer
+              Skills & Strengths
             </span>
           </div>
           <h2
             id="skills-heading"
             className="font-serif-display text-3xl sm:text-4xl font-bold tracking-tight mb-4"
           >
-            Key Skills & Practical Context
+            Key Skills & What I Can Do
           </h2>
           <p
             className={`text-base sm:text-lg leading-relaxed ${
@@ -103,7 +103,7 @@ export default function SkillsSection({ skillGroups, currentTheme }: SkillsSecti
                 : 'text-slate-600'
             }`}
           >
-            An interactive matrix integrating scientific analysis with executive leadership, diplomatic negotiation, and mass media communication. Click any skill to inspect practical applications.
+            A breakdown of technical knowledge, public speaking, teamwork, and media skills. Click any skill to see where and how I have used it.
           </p>
         </div>
 

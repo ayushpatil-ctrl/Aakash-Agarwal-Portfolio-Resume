@@ -3,35 +3,35 @@ import { ProfileData, EducationItem, ExperienceItem, MUNItem, SkillGroup, ThemeC
 export const profileData: ProfileData = {
   name: "Aakash Agarwal",
   role: "B.Tech Freshman",
-  subRole: "Pre-College Researcher · Model UN Secretariat & EB · Mass Media Fellow",
+  subRole: "Engineering Student · Model UN Leader · Student Researcher",
   age: 18,
   gender: "Male",
   email: "aakash180108@gmail.com",
   phone: "(+91) 8700905513",
   location: "Ghaziabad / Delhi NCR, India",
-  tagline: "Bridging Analytical Problem-Solving & Engineering Rigor with Diplomatic Leadership & Strategic Communication.",
+  tagline: "First-year engineering student passionate about technology, practical problem-solving, and public speaking.",
   summary:
-    "Driven B.Tech freshman with a strong foundation in analytical problem-solving and an enthusiasm for continuous learning. Eager to apply theoretical coursework to real-world, hands-on projects. Highly collaborative and adaptable, with a dedication to developing innovative technical solutions and expanding practical engineering knowledge.",
+    "I am a first-year B.Tech student who enjoys coding, science, and learning how things work. I like turning classroom knowledge into practical, real-world projects. Whether working in a tech team, organizing large student events, or speaking on stage, I focus on clear communication, hard work, and getting things done.",
   quickStats: [
     {
-      label: "CBSE Class X Board",
+      label: "Class 10 Board",
       value: "94.8%",
-      subtext: "99/100 in CS & Social Studies"
+      subtext: "99/100 in Computer Science & Social Studies"
     },
     {
-      label: "CBSE Class XII Board",
+      label: "Class 12 Board",
       value: "93.4%",
       subtext: "96/100 in Chemistry"
     },
     {
-      label: "MUN & Summit Roles",
+      label: "Model UN Events",
       value: "12+",
-      subtext: "Secretariat, EB & Delegations"
+      subtext: "12+ events as leader & delegate"
     },
     {
-      label: "University Fellowships",
+      label: "University Programs",
       value: "2",
-      subtext: "Bennett On-Site Internships"
+      subtext: "2 on-site internships at Bennett"
     }
   ]
 };
@@ -44,9 +44,9 @@ export const educationData: EducationItem[] = [
     institute: "Seth Anandram Jaipuria School, Ghaziabad",
     percentage: 93.4,
     highlights: [
-      "Achieved an exceptional score of 96/100 in Chemistry in CBSE Class XII Board Examination.",
-      "Rigorous core curriculum in Advanced Mathematics, Chemistry, Physics, and Analytical Sciences.",
-      "Consistently demonstrated academic discipline and analytical problem solving across laboratory & theoretical evaluations."
+      "Scored 96 out of 100 in Chemistry in the CBSE Class 12 Board Exams.",
+      "Studied the Science stream with Advanced Physics, Chemistry, and Mathematics (PCM).",
+      "Maintained strong grades across theoretical written tests and practical laboratory experiments."
     ],
     keySubjects: ["Physics", "Chemistry (96/100)", "Mathematics", "English"]
   },
@@ -57,9 +57,9 @@ export const educationData: EducationItem[] = [
     institute: "Seth Anandram Jaipuria School, Ghaziabad",
     percentage: 94.8,
     highlights: [
-      "Achieved top honors with 99/100 in Computer Science and Social Studies in CBSE Class X Board Examination.",
-      "Strong foundational aptitude in algorithmic thinking, computational logic, and socio-economic systems.",
-      "Elected and appointed to various school co-curricular societies and inter-school academic delegations."
+      "Scored 99 out of 100 in both Computer Science and Social Studies.",
+      "Built a solid foundation in computer programming logic and social sciences.",
+      "Actively took part in school academic clubs and represented the school in inter-school events."
     ],
     keySubjects: ["Computer Science (99/100)", "Social Studies (99/100)", "Science", "Mathematics"]
   }
@@ -68,20 +68,20 @@ export const educationData: EducationItem[] = [
 export const experienceData: ExperienceItem[] = [
   {
     id: "bennett-summer-research",
-    title: "Summer Research & Academic Intern",
+    title: "Summer Research Intern",
     organization: "Bennett University",
     type: "On-Site Internship",
     location: "Greater Noida, India",
-    period: "Pre-College Summer Fellowship",
-    impactArea: "Academic Research & Leadership Readiness",
+    period: "Summer Fellowship",
+    impactArea: "Academic Research & Teamwork",
     featuredStat: "Faculty-led Research",
     points: [
-      "Selected for a competitive pre-college summer internship, collaborating directly with university faculty and higher-education peers on complex academic projects.",
-      "Assisted with quantitative research, data organization, structured documentation, and executive presentation preparation.",
-      "Strengthened analytical problem-solving and multidisciplinary teamwork skills in an active university laboratory and lecture ecosystem.",
-      "Developed strong organizational and communication abilities in a higher-education environment, demonstrating early readiness for campus leadership."
+      "Selected for a summer research program at Bennett University, collaborating with professors and senior students.",
+      "Helped organize research data, write project notes, and create clear presentation slides.",
+      "Learned how university research works and solved problems as part of a friendly, collaborative team.",
+      "Built strong habits in time management, technical documentation, and campus teamwork."
     ],
-    tags: ["Academic Research", "Data Organization", "Faculty Collaboration", "Campus Leadership", "Presentation Design"]
+    tags: ["Research", "Data Organization", "Presentations", "Teamwork", "Problem Solving"]
   },
   {
     id: "bennett-mass-media",
@@ -90,15 +90,15 @@ export const experienceData: ExperienceItem[] = [
     type: "On-Site Internship",
     location: "Greater Noida, India",
     period: "Winter Intensive Program",
-    impactArea: "Journalistic Writing & Strategic Outreach",
-    featuredStat: "Investigative & Media Operations",
+    impactArea: "News Writing & Public Speaking",
+    featuredStat: "Hands-on Journalism",
     points: [
-      "Selected for a rigorous winter mass media program, gaining intensive hands-on experience in content creation, interviewing, and journalistic reporting.",
-      "Developed strong narrative storytelling and public relations skills directly applicable to student outreach, press communications, and campus engagement initiatives.",
-      "Strengthened public speaking and investigative interview skills, actively gathering community feedback and distilling complex information into clear, compelling narratives.",
-      "Collaborated with media mentors on editorial review, audio-visual journalism workflows, and audience-first reporting standards."
+      "Completed an intensive winter media program, learning how to report stories, write articles, and interview people.",
+      "Practiced writing clear news updates, press releases, and student announcements.",
+      "Spoke with students and campus visitors to collect feedback and turned key points into easy-to-read stories.",
+      "Worked with media mentors on article editing, video basics, and speaking clearly on camera."
     ],
-    tags: ["Journalistic Writing", "Interviewing", "Public Relations", "Content Creation", "Community Engagement", "Public Speaking"]
+    tags: ["Article Writing", "Interviewing", "Public Speaking", "Media & News", "Content Creation"]
   }
 ];
 
@@ -111,7 +111,7 @@ export const munData: MUNItem[] = [
     year: "2025",
     role: "Senior Advisor",
     category: "secretariat",
-    description: "Mentored incoming organizing teams, reviewed parliamentary rules, and provided strategic oversight for delegate administration."
+    description: "Guided the junior organizing team and helped make sure all conference debate rules ran smoothly."
   },
   {
     id: "jmunc-25-treasurer",
@@ -120,7 +120,7 @@ export const munData: MUNItem[] = [
     year: "2025",
     role: "Convenor Treasurer",
     category: "secretariat",
-    description: "Managed conference budgeting, vendor financial clearances, registration fee accounts, and fiscal logistics for several hundred delegates."
+    description: "Handled the conference budget, tracked delegate registrations, and managed vendor payments for hundreds of students."
   },
   {
     id: "jmunc-24-delegate-affairs-head",
@@ -129,7 +129,7 @@ export const munData: MUNItem[] = [
     year: "2024",
     role: "Head of Delegate Affairs",
     category: "secretariat",
-    description: "Spearheaded all delegate allocations, committee communication channels, orientation, and resolution logistics."
+    description: "Assigned countries to delegates, answered queries, and organized the delegate orientation sessions."
   },
   // Executive Board
   {
@@ -140,7 +140,7 @@ export const munData: MUNItem[] = [
     role: "Rapporteur (UNHRC)",
     category: "executive-board",
     committee: "United Nations Human Rights Council (UNHRC)",
-    description: "Adjudicated committee debates, maintained the Speakers List, drafted executive summaries, and audited draft resolutions on international human rights covenants."
+    description: "Helped manage debate in the UN Human Rights Council, timed speeches, and reviewed student-drafted resolutions."
   },
   // Team Work & Organizing
   {
@@ -150,7 +150,7 @@ export const munData: MUNItem[] = [
     year: "2023",
     role: "Finance Operations",
     category: "teamwork",
-    description: "Facilitated sponsor disbursements, institutional accounting, speaker hospitality logistics, and event financial reconciliations."
+    description: "Helped manage event expenses, handled speaker arrangements, and tracked the event budget."
   },
   {
     id: "jmunc-23-delegate-affairs",
@@ -159,7 +159,7 @@ export const munData: MUNItem[] = [
     year: "2023",
     role: "Delegate Affairs Officer",
     category: "teamwork",
-    description: "Coordinated on-ground delegate registration, resolution dissemination, and committee operational readiness."
+    description: "Helped check-in delegates at the venue, handed out resolution papers, and assisted committee rooms."
   },
   {
     id: "munc-22-marketing",
@@ -168,7 +168,7 @@ export const munData: MUNItem[] = [
     year: "2022",
     role: "Marketing Lead / Officer",
     category: "teamwork",
-    description: "Designed promotional outreach campaigns, engaged multi-school networks, and drove record delegate enrollment."
+    description: "Designed posters and reached out to multiple schools to bring in delegate registrations."
   },
   {
     id: "comic-con-22",
@@ -177,7 +177,7 @@ export const munData: MUNItem[] = [
     year: "2022",
     role: "Event Operations & Logistics",
     category: "teamwork",
-    description: "Coordinated stage schedules, attendee crowd flow, exhibitor relations, and emergency event contingency planning."
+    description: "Managed crowd flow, coordinated stage timings, and assisted exhibitors during the event."
   },
   // Delegate Experience
   {
@@ -187,7 +187,7 @@ export const munData: MUNItem[] = [
     year: "2024",
     role: "Delegate",
     category: "delegate",
-    description: "Engaged in multilateral negotiations, formulated position papers, and sponsored comprehensive policy working papers."
+    description: "Represented a country, spoke in debates, and worked with other delegates to write solution proposals."
   },
   {
     id: "sajmun-24-kanpur",
@@ -196,7 +196,7 @@ export const munData: MUNItem[] = [
     year: "2024",
     role: "Delegate",
     category: "delegate",
-    description: "Debated geo-political diplomacy, moderated caucus negotiations, and drafted binding committee directives."
+    description: "Debated international politics, negotiated with committee blocs, and voted on resolutions."
   },
   {
     id: "aismun-22",
@@ -205,7 +205,7 @@ export const munData: MUNItem[] = [
     year: "2022",
     role: "Delegate",
     category: "delegate",
-    description: "Represented designated state interests with rigor, diplomatic protocol, and persuasive parliamentary argumentation."
+    description: "Represented designated country policies, followed UN debate procedures, and gave speeches."
   },
   {
     id: "jmunc-21",
@@ -214,7 +214,7 @@ export const munData: MUNItem[] = [
     year: "2021",
     role: "Delegate",
     category: "delegate",
-    description: "Participated in crisis and regular committee sessions, lobbying unmoderated alliances and writing resolution clauses."
+    description: "Took part in committee debate sessions, formed alliances, and contributed clauses to draft resolutions."
   },
   {
     id: "jmunc-20",
@@ -223,7 +223,7 @@ export const munData: MUNItem[] = [
     year: "2020",
     role: "Delegate",
     category: "delegate",
-    description: "Early MUN immersion, debating multilateral foreign policy and mastering United Nations rules of procedure."
+    description: "Practiced Model UN debate rules, learned foreign policy basics, and gave speeches in committee."
   },
   {
     id: "jmunc-19",
@@ -232,48 +232,48 @@ export const munData: MUNItem[] = [
     year: "2019",
     role: "Delegate",
     category: "delegate",
-    description: "Inaugural delegate delegation, developing debate fluency, international relations literacy, and parliamentary decorum."
+    description: "My first Model UN conference, where I learned how UN debates work and built confidence speaking on stage."
   }
 ];
 
 export const skillsData: SkillGroup[] = [
   {
-    category: "Diplomacy & Leadership",
-    description: "Proven executive leadership across Model UN secretariats, committee executive boards, and institutional teams.",
+    category: "Public Speaking & Leadership",
+    description: "Real experience leading teams, running student conferences, and speaking to audiences.",
     skills: [
-      { name: "Leadership", level: "Senior", context: "Secretariat Senior Advisor, Convenor Treasurer & Event Ops Lead" },
-      { name: "Negotiation Skills", level: "Advanced", context: "Multilateral diplomacy, caucus consensus-building & sponsor deals" },
-      { name: "Adaptability", level: "Expert", context: "Thrives across STEM research laboratories, high-pressure conferences & media rooms" },
-      { name: "Time Management", level: "Advanced", context: "Balanced rigorous Class XII board prep (93.4%) with leadership & internships" }
+      { name: "Leadership", level: "Senior", context: "Senior Advisor, Conference Treasurer, and Event Team Lead" },
+      { name: "Team Negotiation", level: "Advanced", context: "Finding common ground and building consensus in group meetings" },
+      { name: "Adaptability", level: "Expert", context: "Comfortable switching between engineering labs, stage speaking, and event teams" },
+      { name: "Time Management", level: "Advanced", context: "Balanced board exams (93.4%) with leadership roles and internships" }
     ]
   },
   {
-    category: "Media & Strategic Communication",
-    description: "Hands-on experience in journalism, public speaking, community feedback gathering, and public relations.",
+    category: "Media & Communication",
+    description: "Comfortable with writing, interviewing, public speaking, and team outreach.",
     skills: [
-      { name: "Public Relations", level: "Advanced", context: "Bennett Mass Media fellow; school & inter-collegiate PR outreach" },
-      { name: "Communication", level: "Expert", context: "Podium keynote speaking, investigative journalism, academic presentations" },
-      { name: "Journalistic Writing", level: "Proficient", context: "Bennett Media program in reporting, editorial synthesis & interviews" },
-      { name: "Community Outreach", level: "Advanced", context: "Engaging feedback channels, student cohorts & delegate networks" }
+      { name: "Public Speaking", level: "Expert", context: "Speaking on stage, giving presentations, and addressing student groups" },
+      { name: "Writing & Storytelling", level: "Proficient", context: "Bennett Media program in article writing, reporting, and interviews" },
+      { name: "Community Outreach", level: "Advanced", context: "Connecting with student groups, listening to feedback, and sharing updates" },
+      { name: "Public Relations", level: "Advanced", context: "Promoting events and sharing news across schools and student networks" }
     ]
   },
   {
-    category: "Engineering & Analytical Problem-Solving",
-    description: "Strong theoretical and practical background in physics, computational thinking, and quantitative analysis.",
+    category: "Engineering & Technical Skills",
+    description: "Strong foundation in math, coding, physics, and practical analysis.",
     skills: [
-      { name: "Applied Sciences & Engineering", level: "Foundational B.Tech", context: "Mechanics, thermodynamics, electrodynamics & theoretical models" },
-      { name: "Computer Science", level: "Distinction (99/100)", context: "Top-percentile CBSE score, algorithmic problem solving & logic" },
-      { name: "Chemistry & Sciences", level: "Distinction (96/100)", context: "High board score, chemical thermodynamics & analytical chemistry" },
-      { name: "Problem-Solving & Data", level: "Advanced", context: "Bennett research data organization & faculty project synthesis" }
+      { name: "Coding & Logic", level: "Top Score (99/100)", context: "Scored 99/100 in Computer Science in Class 10; algorithmic thinking" },
+      { name: "Chemistry & Sciences", level: "Distinction (96/100)", context: "Scored 96/100 in Chemistry in Class 12; laboratory work" },
+      { name: "Engineering Basics", level: "B.Tech Freshman", context: "Studying physics, math, and core engineering subjects" },
+      { name: "Data Organization", level: "Advanced", context: "Sorting and organizing project data during the Bennett summer internship" }
     ]
   },
   {
-    category: "Operations, Finance & Events",
-    description: "End-to-end execution of large-scale conferences, festivals, and budgetary frameworks.",
+    category: "Operations & Event Management",
+    description: "Hands-on experience organizing student events, summits, and handling budgets.",
     skills: [
-      { name: "Event Management", level: "Advanced", context: "COMIC CON '22 event management & multiple JMUNC editions" },
-      { name: "Finance & Budgeting", level: "Proficient", context: "TEDxSAJSV '23 Finance core team & JMUNC '25 Convenor Treasurer" },
-      { name: "Delegate Affairs", level: "Head / Lead", context: "Managed delegate relations, registrations & committee allocations" }
+      { name: "Event Planning", level: "Advanced", context: "Managed operations at COMIC CON '22 and multiple JMUNC conferences" },
+      { name: "Budgeting & Accounts", level: "Proficient", context: "Treasurer for JMUNC '25 and finance team member for TEDxSAJSV '23" },
+      { name: "Delegate Coordination", level: "Head / Lead", context: "Handled registrations and communication for hundreds of students" }
     ]
   }
 ];

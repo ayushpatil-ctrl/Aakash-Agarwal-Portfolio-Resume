@@ -54,7 +54,7 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300 bg-emerald-50 text-emerald-800"
           >
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            Open for Research & Technical Internships
+            Looking for Internships & Projects
           </span>
         </div>
 
@@ -99,7 +99,7 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
                 }`}
               >
                 <div className="font-semibold text-xs uppercase tracking-wider mb-2 opacity-70">
-                  Executive Summary
+                  Quick Intro
                 </div>
                 <p>{profile.summary}</p>
               </div>
@@ -175,7 +175,7 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
               <div className="flex items-center justify-between mb-4 pb-3 border-b">
                 <div>
                   <h3 className="font-serif-display font-bold text-base">
-                    Leadership & Stage Engagements
+                    Public Speaking & Awards
                   </h3>
                   <p
                     className={`text-xs ${
@@ -188,7 +188,7 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
                         : 'text-slate-500'
                     }`}
                   >
-                    Moments featured in official academic vitae
+                    Highlights from school events & Model UN
                   </p>
                 </div>
                 <Award className="w-5 h-5 text-amber-600" />
@@ -215,16 +215,16 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
                       <span className="w-8 h-8 rounded-full bg-blue-500/20 border border-blue-400 flex items-center justify-center mb-1.5">
                         🎙️
                       </span>
-                      <span className="text-xs font-semibold tracking-wide">Keynote & Debate</span>
-                      <span className="text-[10px] text-slate-300">Podium Address · MUN</span>
+                      <span className="text-xs font-semibold tracking-wide">Public Speaking</span>
+                      <span className="text-[10px] text-slate-300">Model UN & Debates</span>
                     </div>
                   </div>
                   <div>
                     <h4 className="text-xs font-bold uppercase tracking-wider mb-1">
-                      Conference Orator
+                      Speaking on Stage
                     </h4>
                     <p className="text-xs text-slate-500 leading-snug">
-                      Addressing delegate chambers, delivering parliamentary speeches, and moderating multilateral debate.
+                      Giving speeches, leading debate rooms, and discussing real-world problems.
                     </p>
                   </div>
                 </div>
@@ -249,15 +249,15 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
                         📜
                       </span>
                       <span className="text-xs font-semibold tracking-wide">Academic Honors</span>
-                      <span className="text-[10px] text-slate-300">Stage Felicitation</span>
+                      <span className="text-[10px] text-slate-300">School Awards</span>
                     </div>
                   </div>
                   <div>
                     <h4 className="text-xs font-bold uppercase tracking-wider mb-1">
-                      Institutional Honor
+                      School Recognition
                     </h4>
                     <p className="text-xs text-slate-500 leading-snug">
-                      Felicitation for scholastic excellence and distinguished co-curricular representation.
+                      Recognized on stage for top academic marks and active participation.
                     </p>
                   </div>
                 </div>
@@ -266,7 +266,7 @@ export default function Hero({ profile, currentTheme }: HeroProps) {
               {/* Quick Credentials Summary */}
               <div className="mt-4 pt-3 border-t flex items-center justify-between text-xs text-slate-500">
                 <span className="flex items-center gap-1">
-                  <BookOpen className="w-3.5 h-3.5" /> Seth Anandram Jaipuria School Alum
+                  <BookOpen className="w-3.5 h-3.5" /> Seth Anandram Jaipuria School
                 </span>
                 <span className="font-semibold text-slate-700 dark:text-slate-300">
                   94.8% & 93.4% Boards

@@ -66,7 +66,7 @@ export default function Footer({ profile, currentTheme }: FooterProps) {
             © {new Date().getFullYear()} Aakash Agarwal. All rights reserved.
           </div>
           <div>
-            Portfolio distilled directly from official academic curriculum vitae.
+            Personal academic & project portfolio.
           </div>
         </div>
       </div>

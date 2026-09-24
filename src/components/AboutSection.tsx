@@ -16,48 +16,48 @@ export default function AboutSection({ profile, currentTheme }: AboutSectionProp
   const pillars = [
     {
       icon: Brain,
-      title: "Scientific Inquiry & Computational Rigor",
+      title: "Tech & Problem Solving",
       description:
-        "Grounded in analytical reasoning and computational logic. Scored 99/100 in Computer Science and 96/100 in Chemistry in CBSE Board Examinations, channeling quantitative precision into engineering problem-solving.",
-      badge: "Analytical Core",
+        "I enjoy programming, math, and understanding how things work under the hood. In my CBSE board exams, I scored 99/100 in Computer Science and 96/100 in Chemistry.",
+      badge: "Coding & Logic",
       targetId: "education",
     },
     {
       icon: Landmark,
-      title: "Model UN & Diplomatic Leadership",
+      title: "Public Speaking & Leadership",
       description:
-        "Extensive 6-year trajectory through parliamentary debate. Advanced to UNHRC Rapporteur (PRUMUN '24), Head of Delegate Affairs (JMUNC '24), and Convenor Treasurer & Senior Advisor (JMUNC '25), overseeing multi-institutional delegations.",
-      badge: "Governance & Debate",
+        "6 years of public speaking, debate, and team leadership. I have helped run large Model UN events — managing budgets, mentoring delegates, and moderating committee debates.",
+      badge: "Model UN & Teams",
       targetId: "mun",
     },
     {
       icon: Newspaper,
-      title: "Journalistic Writing & Community Outreach",
+      title: "Media & Clear Communication",
       description:
-        "Trained through Bennett University's on-site winter mass media program in interviewing, investigative storytelling, and community feedback gathering, bridging technical discourse with clear public messaging.",
-      badge: "Strategic Communication",
+        "Completed a hands-on journalism internship at Bennett University, learning how to interview people, tell stories, and explain complex ideas in clear, simple words.",
+      badge: "Writing & Storytelling",
       targetId: "experience",
     },
   ];
 
   const quickQuestions = [
     {
-      question: "What is Aakash's current academic standing?",
-      answer: "Aakash is an 18-year-old Bachelor of Technology (B.Tech) freshman focusing on engineering sciences and quantitative problem-solving. He completed Class XII with a 93.4% aggregate and Class X with 94.8% from Seth Anandram Jaipuria School.",
+      question: "What is Aakash currently studying?",
+      answer: "Aakash is an 18-year-old first-year B.Tech engineering student. In school, he scored 93.4% in Class 12 and 94.8% in Class 10 from Seth Anandram Jaipuria School.",
       jumpSection: "education",
-      jumpLabel: "View Academic Honors",
+      jumpLabel: "View Marks & Schooling",
     },
     {
-      question: "What was his role at the Bennett University Summer Fellowship?",
-      answer: "Aakash was selected for a competitive on-site summer fellowship at Bennett University, assisting university faculty with quantitative research, structured documentation, and laboratory data organization.",
+      question: "What did he do at Bennett University?",
+      answer: "He completed two hands-on programs at Bennett University: a summer research fellowship working with faculty on data, and a winter media program focused on reporting and interviews.",
       jumpSection: "experience",
-      jumpLabel: "View Research Experience",
+      jumpLabel: "View Internships",
     },
     {
-      question: "What leadership positions has he held in Model UN?",
-      answer: "Aakash has commanded key secretariat and executive board posts, serving as Senior Advisor & Convenor Treasurer for JMUNC '25, Head of Delegate Affairs for JMUNC '24, and UNHRC Rapporteur for PRUMUN '24, with 13 total conferences attended since 2019.",
+      question: "What leadership roles has he handled in Model UN?",
+      answer: "Across 6 years and 13+ conferences, he has served as Senior Advisor, Conference Treasurer, Head of Delegate Affairs, and Committee Rapporteur.",
       jumpSection: "mun",
-      jumpLabel: "Explore Leadership Vitae",
+      jumpLabel: "View Model UN Roles",
     },
   ];
 
@@ -80,14 +80,14 @@ export default function AboutSection({ profile, currentTheme }: AboutSectionProp
               className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase border ${theme.badgeBg}`}
             >
               <Compass className="w-3.5 h-3.5" />
-              Philosophy & Trajectory
+              About Me
             </span>
           </div>
           <h2
             id="about-heading"
-            className="font-serif-display text-3xl sm:text-4xl font-bold tracking-tight mb-4"
+            className="font-serif-display text-3xl sm:text-4xl lg:text-[2.6rem] font-bold tracking-tight mb-4 text-[#231E1C] leading-[1.2]"
           >
-            Engineering Rigor Meets Diplomatic Poise
+            Engineering Student, Speaker & Team Leader
           </h2>
           <p
             className={`text-base sm:text-lg leading-relaxed ${
@@ -100,7 +100,7 @@ export default function AboutSection({ profile, currentTheme }: AboutSectionProp
                 : 'text-slate-600'
             }`}
           >
-            Aakash Agarwal is a B.Tech freshman whose academic foundation combines the analytical depth of engineering with executive responsibility in Model UN leadership and on-site media journalism.
+            Hi, I'm Aakash Agarwal — an 18-year-old engineering student who enjoys coding, solving math problems, and working with people. Over the last 6 years, I have helped organize school events, worked on research with college professors, and reported stories as a student journalist.
           </p>
         </div>
 
@@ -155,47 +155,27 @@ export default function AboutSection({ profile, currentTheme }: AboutSectionProp
                   <button
                     type="button"
                     onClick={() => scrollToSection(pillar.targetId)}
-                    className={`inline-flex items-center gap-1 font-semibold hover:underline ${
-                      currentTheme === 'burgundy'
-                        ? 'text-[#6B1D2F]'
-                        : currentTheme === 'emerald'
-                        ? 'text-[#1b4332]'
-                        : 'text-blue-600 dark:text-blue-400'
-                    }`}
+                    className="inline-flex items-center gap-1 font-semibold hover:underline text-[#6B1D2F]"
                   >
-                    <span>Inspect Domain</span>
+                    <span>Learn More</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
-                  <span className="text-slate-400 text-[11px]">Core Anchor</span>
+                  <span className="text-[#8C8278] text-[11px]">Key Strength</span>
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* Interactive Quick FAQ & Briefing Accordion */}
+        {/* Interactive Quick FAQ */}
         <div
           id="about-interactive-faq"
-          className={`p-6 sm:p-8 rounded-2xl border transition-all ${
-            currentTheme === 'obsidian'
-              ? 'bg-slate-900/60 border-slate-800'
-              : currentTheme === 'emerald'
-              ? 'bg-[#faf8f4] border-[#e4ddd0]'
-              : currentTheme === 'burgundy'
-              ? 'bg-[#FAF7F2] border-[#E7E0D6]'
-              : 'bg-slate-50/80 border-slate-200'
-          }`}
+          className="p-6 sm:p-8 rounded-2xl border transition-all bg-[#FAF7F2] border-[#E7E0D6]"
         >
           <div className="flex items-center gap-2 mb-4">
-            <HelpCircle className={`w-4 h-4 ${
-              currentTheme === 'burgundy'
-                ? 'text-[#6B1D2F]'
-                : currentTheme === 'emerald'
-                ? 'text-[#1b4332]'
-                : 'text-blue-600 dark:text-blue-400'
-            }`} />
+            <HelpCircle className="w-4 h-4 text-[#6B1D2F]" />
             <h3 className="font-serif-display font-bold text-lg">
-              Quick Candidate Briefing (Interactive FAQ)
+              Frequently Asked Questions
             </h3>
           </div>
 
